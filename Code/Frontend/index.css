@@ -1,0 +1,201 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+header::before {
+    /* background-image: url('/Pictures/bg.jpg'); */
+    background-image: url('/Projects/Safarcopy/Logo/bubg.jpg');
+    background-repeat: no-repeat;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+.left {
+    position: absolute;
+    top: 20px;
+    left: 55px;
+    display: inline-block;
+    /* border: 2px solid red; */
+    text-align: center;
+}
+
+.left img {
+    width: 150px;
+    /* filter: invert(100%); */
+}
+
+.left div {
+    text-align: center;
+}
+
+.mid {
+    display: block;
+    width: 33%;
+    margin: 20px auto;
+    font-size: 30px;
+    /* border: 2px solid green; */
+
+}
+
+.navbar {
+    display: inline-block;
+}
+
+.navbar li {
+    display: inline-block;
+}
+
+.navbar li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 15px 20px;
+    transition: all 0.5s ease-in-out;
+}
+
+.navbar li a:hover,
+.navbar li a.active {
+    color: #7887b1;
+    text-decoration: none;
+    
+
+}
+
+.right {
+    position: absolute;
+    top: 50px;
+    right: 55px;
+    display: inline-block;
+    /* border: 2px solid yellow; */
+}
+
+.btn {
+    background-color: black;
+    color: white;
+    margin: 0px 20px;
+    padding: 10px 10px;
+    border: 1px solid gray;
+    border-radius: 15px;
+    font-size: 15px;
+    cursor: pointer;
+    font-family: 'Rajdhani', sans-serif;
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+}
+.btn:hover{
+
+    background-color: #7887b1;
+    border: 1px solid black;
+    
+
+}
+
+
+        .booking-form {
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            margin-top: 80px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        
+
+        
+        .booking-form h1 {
+            color: white;
+            margin-bottom: -50px;
+            font-size: 50px;
+        }
+        
+        .booking-form form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+            height: 110px;
+            border: 1px solid gray;
+            border-radius: 15px;
+            color: rgb(175, 13, 13);
+            background-color: #51505875;
+        }
+
+        .booking-form form label,
+        input {
+            margin: 15px;
+            font-size: 15px;
+            font-weight: bold;
+            text-align: center;
+            color: gray;
+        }
+
+        .booking-form form label{
+            color: gray;
+            font-size: 20px;
+        }
+
+        #date{
+            width: 90%;
+        }
+
+        #search{
+            width: 600px;
+        }
+
+section {
+    height: 344px;
+    margin: 3px 230px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+p {
+    text-align: center;
+}
+
+
+footer {
+    /* background-color: #363352; */
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    margin-top: 210px;
+}
+
+footer a {
+    color: white;
+    text-decoration: underline;
+    /* font-size: 20px;
+    font-weight: bold; */
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+footer a:hover {
+    color: #7887b1;
+    cursor: pointer;
+}
