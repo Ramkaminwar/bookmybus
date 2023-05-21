@@ -20,8 +20,7 @@ font-family: 'Rajdhani', sans-serif;
 }
 
 header::before {
-/* background-image: url('/Pictures/bg.jpg'); */
-background-image: url('/Projects/Safarcopy/Logo/bubg.jpg');
+background-image: url('/bookmybus/Public/Pictures/bg.jpg');
 background-repeat: no-repeat;
 content: "";
 position: absolute;
@@ -38,13 +37,11 @@ position: absolute;
 top: 20px;
 left: 55px;
 display: inline-block;
-/* border: 2px solid red; */
 text-align: center;
 }
 
 .left img {
 width: 150px;
-/* filter: invert(100%); */
 }
 
 .left div {
@@ -56,8 +53,6 @@ display: block;
 width: 33%;
 margin: 20px auto;
 font-size: 30px;
-/* border: 2px solid green; */
-
 }
 
 .navbar {
@@ -88,7 +83,6 @@ position: absolute;
 top: 50px;
 right: 55px;
 display: inline-block;
-/* border: 2px solid yellow; */
 }
 
 .btn {
@@ -115,7 +109,6 @@ transition: all 0.5s ease-in-out;
 .container {
     text-align: center;
     border: 2px solid whitesmoke;
-    /* margin: 170px 148px; */
     margin: auto;
     margin-top: 200px;
     padding: 35px 18px;

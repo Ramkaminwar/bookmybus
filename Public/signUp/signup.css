@@ -1,7 +1,5 @@
 body {
-    /* background: url("/Pictures/login\ bg.jpeg"); */
-    /* background: url("/Projects/Safarcopy/Pictures/login\ bg.jpeg"); */
-    background: url("/Projects/Safarcopy/Pictures/bg3.jpg");
+    background: url("/bookmybus/Public/Pictures/loginbg.jpeg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -45,7 +43,6 @@ body {
 .navbar li a.active {
     color: #7887b1;
     text-decoration: none;
-
 }
 
 input {

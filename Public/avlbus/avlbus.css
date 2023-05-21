@@ -20,8 +20,7 @@
 }
 
 header::before {
-    /* background-image: url('/Pictures/bg.jpg'); */
-    background-image: url('/Projects/Safarcopy/Logo/bubg.jpg');
+    background-image: url('/bookmybus/Public/Pictures/bg.jpg');
     background-repeat: no-repeat;
     content: "";
     position: absolute;
@@ -38,13 +37,11 @@ header::before {
     top: 20px;
     left: 55px;
     display: inline-block;
-    /* border: 2px solid red; */
     text-align: center;
 }
 
 .left img {
     width: 150px;
-    /* filter: invert(100%); */
 }
 
 .left div {
@@ -56,8 +53,6 @@ header::before {
     width: 33%;
     margin: 20px auto;
     font-size: 30px;
-    /* border: 2px solid green; */
-
 }
 
 .navbar {
@@ -88,7 +83,6 @@ header::before {
     top: 50px;
     right: 55px;
     display: inline-block;
-    /* border: 2px solid yellow; */
 }
 
 .btn {
@@ -106,8 +100,6 @@ header::before {
 }
 
 .btn:hover{
-
     background-color: #7887b1;
     border: 1px solid black;
-
 }

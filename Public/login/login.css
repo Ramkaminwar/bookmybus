@@ -1,7 +1,5 @@
 body {
-    /* background-image: url("/Pictures/login\ bg.jpeg"); */
-    /* background-image: url("/Projects/Safarcopy/Pictures/login\ bg.jpeg"); */
-    background: url("/Projects/Safarcopy/Pictures/bg3.jpg");
+    background: url("/bookmybus/Public/Pictures/loginbg.jpeg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -85,4 +83,3 @@ p {
     display: flex;
     justify-content: center;
 }
-

@@ -7,8 +7,7 @@ body {
 }
 
 header::before {
-    /* background-image: url('/Pictures/bg.jpg'); */
-    background-image: url('/Projects/Safarcopy/Logo/bubg.jpg');
+    background-image: url('/bookmybus/Public/Pictures/bg.jpg');
     background-repeat: no-repeat;
     content: "";
     position: absolute;
@@ -25,13 +24,11 @@ header::before {
     top: 20px;
     left: 55px;
     display: inline-block;
-    /* border: 2px solid red; */
     text-align: center;
 }
 
 .left img {
     width: 150px;
-    /* filter: invert(100%); */
 }
 
 .left div {
@@ -43,8 +40,6 @@ header::before {
     width: 33%;
     margin: 20px auto;
     font-size: 30px;
-    /* border: 2px solid green; */
-
 }
 
 .navbar {
@@ -76,7 +71,6 @@ header::before {
     top: 50px;
     right: 55px;
     display: inline-block;
-    /* border: 2px solid yellow; */
 }
 
 .btn {
@@ -100,7 +94,6 @@ header::before {
 
 }
 
-
         .booking-form {
             background-repeat: no-repeat;
             background-size: cover;
@@ -112,9 +105,6 @@ header::before {
             justify-content: space-around;
             align-items: center;
         }
-
-        
-
         
         .booking-form h1 {
             color: white;
@@ -171,11 +161,9 @@ h1 {
 
 p {
     text-align: center;
-}
-
+}   
 
 footer {
-    /* background-color: #363352; */
     color: white;
     padding: 20px;
     display: flex;
@@ -189,8 +177,6 @@ footer {
 footer a {
     color: white;
     text-decoration: underline;
-    /* font-size: 20px;
-    font-weight: bold; */
     cursor: pointer;
     transition: all 0.5s ease-in-out;
 }
