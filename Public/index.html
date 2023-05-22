@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,16 @@
     <title>Safar</title>
     <link rel="stylesheet" href="/index.css">
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js">
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.js">
+    </script>
+
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/ui-lightness/jquery-ui.css" rel="stylesheet" type="text/css" />
+
 </head>
+
 <body>
     <header class="header">
 
@@ -35,43 +45,44 @@
 
 
     </header>
-                <section class="booking-form">
-                    <h1>Book Your Bus Ticket</h1>
-                    <form>
-                        <label for="from">Source:</label>
-                        <select name="mycity1" id="mycity1">
+    <section class="booking-form">
+        <h1>Book Your Bus Ticket</h1>
+        <form>
+            <label for="from">Source:</label>
+            <select name="mycity1" id="mycity1">
                             <option value="mumbai">Mumbai</option>
                             <option value="pune">Pune</option>
                             <option value="nagpur">Nagpur</option>
                             <option value="nanded">Nanded</option>
                             <option value="latur">Latur</option>
                         </select>
-        
-                        <label for="to">Destination:</label>
-                        <select name="mycity2" id="mycity2">
+
+            <label for="to">Destination:</label>
+            <select name="mycity2" id="mycity2">
                             <option value="mumbai">Mumbai</option>
                             <option value="pune">Pune</option>
                             <option value="nagpur">Nagpur</option>
                             <option value="nanded">Nanded</option>
                             <option value="latur">Latur</option>
                         </select>
-        
-                        <label for="date">Date:</label>
-                        <input type="date" id="date" name="date">
-                        
-                        <label for="passengers">Passengers:</label>
-                        <input type="number" id="passengers" name="passengers" min="1" max="10" placeholder="1">
-        
-                        <button type="submit" class="btn" id="search">Search Bus</button>
-                    </form>
-                </section>
-       <hr>
-       <footer>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date">
+
+            <label for="passengers">Passengers:</label>
+            <input type="number" id="passengers" name="passengers" min="1" max="10" placeholder="1">
+
+            <button type="submit" class="btn" id="search">Search Bus</button>
+        </form>
+    </section>
+    <hr>
+    <footer>
         <p>
-            Copyright &copy; 2023 Bus Ticket Website. <br />
-            All rights reserved by <a>Bus Project</a>
+            Copyright &copy; 2023 Bus Ticket Website. <br /> All rights reserved by <a>Bus Project</a>
         </p>
 
     </footer>
 </body>
+<script src="/index.js"></script>
+
 </html>
