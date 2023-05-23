@@ -1,5 +1,7 @@
 var express = require("express");
 var app = express();
+require("./db");
+const handle_db = require("./handle_db");
 const bodyParser = require("body-parser");
 app.use(express.json());
 
@@ -12,12 +14,17 @@ app.use(
 app.use(express.static("public"));
 
 app.get("/", async function (req, res) {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "GET");
   res.send("ram");
 });
 
-app.get("/city-list", async function (req, res) {
+app.get("/city_list", async function (req, res) {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "GET");
+  handle_db.find();
   // It Will return number of cities
-  res.send("ram");
+  res.json("nanded");
 });
 
 app.get("/getData", async function (req, res) {
