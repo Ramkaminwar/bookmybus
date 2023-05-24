@@ -13,7 +13,10 @@ const schema = new mongoose.Schema({
     type: String,
     required: true,
   },
-
+  date: {
+    type: Date,
+    required: true,
+  },
   time: {
     type: String,
     required: true,
@@ -24,5 +27,5 @@ const schema = new mongoose.Schema({
   },
 });
 
-const handle_db = new mongoose.model("handle_db", schema);
-module.exports = handle_db;
+const schedule_db = new mongoose.model("schedule_db", schema);
+module.exports = schedule_db;

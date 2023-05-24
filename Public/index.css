@@ -62,8 +62,6 @@ header::before {
 .navbar li a.active {
     color: #7887b1;
     text-decoration: none;
-    
-
 }
 
 .right {
@@ -86,65 +84,63 @@ header::before {
     text-decoration: none;
     transition: all 0.5s ease-in-out;
 }
-.btn:hover{
 
+.btn:hover {
     background-color: #7887b1;
     border: 1px solid black;
-    
-
 }
 
-        .booking-form {
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            margin-top: 80px;
-            padding: 30px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
-        }
-        
-        .booking-form h1 {
-            color: white;
-            margin-bottom: -50px;
-            font-size: 50px;
-        }
-        
-        .booking-form form {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 80%;
-            height: 110px;
-            border: 1px solid gray;
-            border-radius: 15px;
-            color: rgb(175, 13, 13);
-            background-color: #51505875;
-        }
+.booking-form {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-top: 80px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
 
-        .booking-form form label,
-        input {
-            margin: 15px;
-            font-size: 15px;
-            font-weight: bold;
-            text-align: center;
-            color: gray;
-        }
+.booking-form h1 {
+    color: white;
+    margin-bottom: -50px;
+    font-size: 50px;
+}
 
-        .booking-form form label{
-            color: gray;
-            font-size: 20px;
-        }
+.booking-form form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 110px;
+    border: 1px solid gray;
+    border-radius: 15px;
+    color: rgb(175, 13, 13);
+    background-color: #51505875;
+}
 
-        #date{
-            width: 90%;
-        }
+.booking-form form label,
+input {
+    margin: 15px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    color: gray;
+}
 
-        #search{
-            width: 600px;
-        }
+.booking-form form label {
+    color: gray;
+    font-size: 20px;
+}
+
+#date {
+    width: 90%;
+}
+
+#search {
+    width: 600px;
+}
 
 section {
     height: 344px;
@@ -161,7 +157,7 @@ h1 {
 
 p {
     text-align: center;
-}   
+}
 
 footer {
     color: white;

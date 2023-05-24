@@ -1,7 +1,8 @@
 var express = require("express");
 var app = express();
 require("./db");
-const handle_db = require("./handle_db");
+const schedule_db = require("./schedule_db");
+const city_db = require("./city_db");
 const bodyParser = require("body-parser");
 app.use(express.json());
 
@@ -16,15 +17,25 @@ app.use(express.static("public"));
 app.get("/", async function (req, res) {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "GET");
+  var data = new schedule_db({
+    bus_number: "80",
+    source: "Nanded",
+    destination: "Mumbai",
+    time: "2pm",
+    price: 2000,
+  });
+  data.save(data);
+
   res.send("ram");
 });
 
 app.get("/city_list", async function (req, res) {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "GET");
-  handle_db.find();
   // It Will return number of cities
-  res.json("nanded");
+  var data = await city_db.distinct("city_name");
+  console.log(data);
+  res.json(data);
 });
 
 app.get("/getData", async function (req, res) {

@@ -5,14 +5,17 @@ fetch("http://localhost/city_list")
     return data.json();
   })
   .then((post) => {
-    console.log(post);
+    post.forEach((element) => {
+      $("#mycity1").append(`<option value=${element} >${element}</option>`);
+      $("#mycity2").append(`<option value=${element} >${element}</option>`);
+    });
   });
 
 var now = new Date(),
   // minimum date the user can choose, in this case now and in the future
   minDate = now.toISOString().substring(0, 10);
 
-$("#date").prop("min", minDate);
+// $("#date").prop("min", minDate);
 
 var search_btn = document.querySelector("#search");
 
