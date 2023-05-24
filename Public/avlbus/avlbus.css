@@ -136,6 +136,9 @@ header::before {
     font-family: 'Rajdhani', sans-serif;
     text-decoration: none;
     transition: all 0.5s ease-in-out;
+    width: auto;
+    text-align: center;
+
 }
 
 .btn:hover{

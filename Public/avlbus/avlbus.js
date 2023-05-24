@@ -18,3 +18,8 @@ fetch(`http://localhost/search_bus?source=${source}&desti=${desti}`)
       $("#box6").append(`<div class="box" id="box6">${element.price}</div>`);
     });
   });
+
+
+  function myFunction() {
+    alert("\nCongratulations!!\nYour Ticket is Booked");
+  }
