@@ -11,6 +11,11 @@ body {
     font-family: 'Rajdhani', sans-serif;
 }
 
+.hehe {
+    display: flex;
+    justify-content: right;
+}
+
 .mid {
     display: block;
     width: 33%;
@@ -40,6 +45,10 @@ body {
     text-decoration: none;
 }
 
+input {
+    font-size: large;
+}
+
 .sec1 {
     position: absolute;
     min-height: 90vh;
@@ -53,7 +62,6 @@ input {
     border-radius: 100px;
     height: 40px;
     width: 300px;
-    font-size: large;
     color: aliceblue;
     background: rgba(255, 255, 255, 0.1);
     margin-bottom: 5%;

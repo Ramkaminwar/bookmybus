@@ -19,7 +19,8 @@ font-family: 'Rajdhani', sans-serif;
 }
 
 header::before {
-background-image: url('/Public/Pictures/bg.jpg');
+background-image: url('/Pictures/bg.jpg');
+filter: blur(40px);
 background-repeat: no-repeat;
 content: "";
 position: absolute;
@@ -110,12 +111,15 @@ transition: all 0.5s ease-in-out;
     text-align: center;
     border: 2px solid whitesmoke;
     margin: auto;
-    margin-top: 180px;
+    margin-top: 150px;
     padding: 35px 18px;
     border-radius: 26px;
-    width: 1200px;
-    height: 400px;
+    width: 1350px;
+    height: 550px;
+}
+.head{
+    font-size: 50px;
 }
 p{
-    font-size: 20px;
+    font-size: 25px;
 }

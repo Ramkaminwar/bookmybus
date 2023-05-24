@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const schema = new mongoose.Schema({
-  bus_number: {
+  Agency: {
     type: String,
     required: true,
   },
@@ -13,13 +13,13 @@ const schema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  date: {
-    type: Date,
-    required: true,
-  },
-  time: {
+  pickup_time: {
     type: String,
     required: true,
+  },
+  drop_time: {
+    type: String,
+    require: true,
   },
   price: {
     type: Number,

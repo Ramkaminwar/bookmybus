@@ -34,18 +34,22 @@ app.get("/city_list", async function (req, res) {
   res.setHeader("Access-Control-Allow-Methods", "GET");
   // It Will return number of cities
   var data = await city_db.distinct("city_name");
-  console.log(data);
   res.json(data);
 });
 
-app.get("/getData", async function (req, res) {
-  //   res.setHeader("Access-Control-Allow-Origin", "*");
-  //   res.setHeader("Access-Control-Allow-Methods", "GET");
+app.get("/search_bus", async function (req, res) {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "GET");
   var query = require("url").parse(req.url, true).query;
+  const sourceVariable = query.source;
+  const destinationVariable = query.desti;
+  var data = await schedule_db.find({
+    source: sourceVariable,
+    destination: destinationVariable,
+  });
+  console.log(data);
 
-  console.log(query);
-
-  res.json(query);
+  res.json(data);
 });
 
 app.get("/Search-Ticket", async function (req, res) {

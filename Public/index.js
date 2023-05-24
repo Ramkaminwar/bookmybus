@@ -17,19 +17,18 @@ var now = new Date(),
 
 // $("#date").prop("min", minDate);
 
-var search_btn = document.querySelector("#search");
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const source = urlParams.get("mycity1");
+const desti = urlParams.get("mycity2");
 
-search_btn.addEventListener("click", Submit_form);
-
-function Submit_form() {
-  fetch("http://localhost")
-    .then((data) => {
-      return data;
-    })
-    .then((post) => {
-      console.log(post);
+fetch(`http://localhost/search_bus?source=${source}&desti=${desti}`)
+  .then((buses) => {
+    return buses.json();
+  })
+  .then((post) => {
+    console.log(post);
+    post.forEach((element) => {
+      $("#result").append(`<h3>${element.Agency}</h3>`);
     });
-}
-document
-  .querySelector("body > section > form")
-  .addEventListener("submit", Submit_form);
+  });
