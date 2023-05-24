@@ -1,17 +1,55 @@
 
-        .box{
+        /* .box{
             border: 2px solid rgb(199, 198, 198);
             height: 90px;
             display: flex;
-            text-align: center;
             width: 70%;
             display: block;
             margin: auto;
-            padding: 50px;
+            padding-top: 20px;
+            padding-left: 20px;
+            margin-top: 10px;
+            font-size: 40px;
+        } */
+
+        .mainbox{
+            border: 2px solid rgb(233, 5, 5);
+            height: 800px;
+            display: flex;
+            width: 70%;
+            display: block;
+            margin: auto;
+            padding-top: 20px;
+            padding-left: 20px;
             margin-top: 10px;
             font-size: 40px;
         }
-        body {
+
+#details{
+    border: 2px solid rgb(255, 255, 255);
+    height: auto;
+    display: flex;
+    width: 70%;
+    display: block;
+    margin: auto;
+    padding-top: 20px;
+    padding-left: 20px;
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+.cbox{
+    height: 120px;
+    width: 250px;
+    margin: 0px;
+    display: inline-block;
+}
+
+/* #box1{
+    display: block;
+} */
+
+body {
     margin: 0;
     padding: 0;
     background-color: black;
@@ -20,7 +58,8 @@
 }
 
 header::before {
-    background-image: url('/Pictures/bg.jpg');
+    /* background-image: url('/Pictures/bg.jpg'); */
+    background: linear-gradient(to top, #505285 0%, #585e92 12%, #65689f 25%, #7474b0 37%, #7e7ebb 50%, #8389c7 62%, #9795d4 75%, #a2a1dc 87%, #b5aee4 100%);
     background-repeat: no-repeat;
     content: "";
     position: absolute;
@@ -41,7 +80,7 @@ header::before {
 }
 
 .left img {
-    width: 150px;
+    width: 120px;
 }
 
 .left div {
@@ -102,4 +141,23 @@ header::before {
 .btn:hover{
     background-color: #7887b1;
     border: 1px solid black;
+}
+
+#box1{
+    width: 260px;
+}
+#box2{
+    width: 190px;
+}
+#box3{
+    width: 190px;
+}
+#box4{
+    width: 180px;
+}
+#box5{
+    width: 180px;
+}
+#box6{
+    width: 100px;
 }

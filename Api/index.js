@@ -17,15 +17,6 @@ app.use(express.static("public"));
 app.get("/", async function (req, res) {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "GET");
-  var data = new schedule_db({
-    bus_number: "80",
-    source: "Nanded",
-    destination: "Mumbai",
-    time: "2pm",
-    price: 2000,
-  });
-  data.save(data);
-
   res.send("ram");
 });
 
