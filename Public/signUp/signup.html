@@ -1,53 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <link rel="stylesheet" type="text/css" href="/signUp/signup.css">
+    <script type="module" src="loginpg.js"></script>
+    <link rel="stylesheet" type="text/css" href="signup.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup</title>
 </head>
-
 <body>
+    
+    <!-- <section class="hehe">
+        <div class="home">Home</div>
+        <div class="about">About us</div>
+        <div class="log"><a href="login.html">Log in/Sign up</a></div>
+    </section> -->
 
     <div class="mid">
-        <ul class="navbar">
-            <li> <a href="/index.html"> Home</a></li>
-            <li> <a href="/avlbus/avlbus.html"> Centres</a></li>
-            <li> <a href="/about_us/aboutus.html"> About Us</a></li>
-            <li> <a href="/contactus/contactus.html"> Contact Us</a></li>
-        </ul>
-    </div>
+      <ul class="navbar">
+          <li> <a href="/index.html"> Home</a></li>
+          <li> <a href="/avlbus/avlbus.html"> Centres</a></li>
+          <li> <a href="/about_us/aboutus.html"> About Us</a></li>
+          <li> <a href="/contactus/contactus.html"> Contact Us</a></li>
+      </ul>
+  </div>
 
     <div class="sec1">
-        <div class="toph">
-            <header>
-                Sign up
-            </header>
+    <div class="toph"><header>
+            Sign up
+        </header></div>
+        
+        <div class="ip">
+           <i class="bx bx-user"></i>
+            <input type="text" name="" placeholder="  Username" id="ip1">
         </div>
         <div class="ip">
-            <i class="bx bx-user"></i>
-            <input type="text" name="" placeholder="  First Name" id="ip1">
-        </div>
-        <div class="ip">
-            <i class="bx bx-user"></i>
-            <input type="text" name="" placeholder=" Last Name" id="ip1">
-        </div>
-        <div class="ip">
-            <i class="bx bx-mobile-alt"></i>
-            <input type="text" name="" placeholder="  Mobile Number/Email-ID" id="ip1">
-        </div>
-        <div class="ip">
-            <i class="bx bx-lock"></i>
-            <input type="password" name="" placeholder="  Password" id="ip2">
+          <i class="bx bx-lock"></i>
+            <input type="password" name="" placeholder="  Password" id="ip2" >
         </div>
         <div class="bt">
-            <input type="submit" name="" value="Sign up" id="bt1">
+            <button id="signupbutton">Sign up </button>
+            <button id="signinbutton">Sign in</button>
         </div>
-        <p>Already have an account ? &nbsp; <a href="/login/login.html">Login</a></p>
-</body>
+        <script type="module">
+          
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js";
 
+
+import {getAuth,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  onAuthStateChanged,
+  signOut
+} from "https://www.gstatic.com/firebasejs/9.21.0/firebase-auth.js";
+
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyA2MgQAuoLgNrQtaAVvf6Zic9ZEukhYtNQ",
+  authDomain: "login-d3166.firebaseapp.com",
+  projectId: "login-d3166",
+  storageBucket: "login-d3166.appspot.com",
+  messagingSenderId: "543515907267",
+  appId: "1:543515907267:web:ed632e526a786f8db83e76",
+  measurementId: "G-PCJKYV0G8E"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const auth =getAuth(app);
+
+const userSignUp = async() => {
+  const signupemail= document.getElementById("ip1").value;
+const signuppassword= document.getElementById("ip2").value;
+  createUserWithEmailAndPassword(auth, signupemail, signuppassword)
+  .then((userCredential) => {
+      const user = userCredential.user;
+      console.log(user);
+      alert("You have Signed up succesfully!!");
+  })
+  .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      console.log(errorCode + errorMessage);
+      
+  })
+}
+
+const userSignIn = async() => {
+  const signinemail= document.getElementById("ip1").value;
+const signinpassword= document.getElementById("ip2").value;
+signInWithEmailAndPassword(auth, signinemail, signinpassword)
+  .then((userCredential) => {
+      const user = userCredential.user;
+      console.log(user);
+      alert("You have Signed in succesfully!!");
+  })
+  .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      console.log(errorCode + errorMessage);
+      alert("User not found!");
+  })
+}
+
+const signupbutton=document.querySelector("#signupbutton");
+const signinbutton=document.querySelector("#signinbutton");
+signinbutton.addEventListener('click',userSignIn);
+signupbutton.addEventListener('click',userSignUp);
+
+        </script>
+</body>
 </html>

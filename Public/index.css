@@ -1,4 +1,4 @@
-body {
+/* body {
     margin: 0;
     padding: 0;
     background-color: black;
@@ -99,7 +99,7 @@ header::before {
             background-size: cover;
             background-position: center;
             margin-top: 80px;
-            padding: 30px;
+            padding: 5px;
             display: flex;
             flex-direction: column;
             justify-content: space-around;
@@ -109,7 +109,7 @@ header::before {
         .booking-form h1 {
             color: white;
             margin-bottom: -50px;
-            font-size: 50px;
+            font-size: 60px;
         }
         
         .booking-form form {
@@ -117,11 +117,11 @@ header::before {
             justify-content: center;
             align-items: center;
             width: 80%;
-            height: 110px;
-            border: 1px solid gray;
+            height: 150px;
+            border: 1px solid gray; 
             border-radius: 15px;
             color: rgb(175, 13, 13);
-            background-color: #51505875;
+            background-color: #29292d75;
         }
 
         .booking-form form label,
@@ -130,7 +130,7 @@ header::before {
             font-size: 15px;
             font-weight: bold;
             text-align: center;
-            color: gray;
+            color: rgb(0, 0, 0);
         }
 
         .booking-form form label{
@@ -139,15 +139,15 @@ header::before {
         }
 
         #date{
-            width: 90%;
+            width: 100%;
         }
 
         #search{
-            width: 600px;
+            width: 500px;
         }
 
 section {
-    height: 344px;
+    height: 444px;
     margin: 3px 230px;
     display: flex;
     flex-direction: column;
@@ -156,7 +156,7 @@ section {
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 3rem;
 }
 
 p {
@@ -184,4 +184,384 @@ footer a {
 footer a:hover {
     color: #7887b1;
     cursor: pointer;
+} */
+
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    font-family: 'Rajdhani', sans-serif;
+    /* background: linear-gradient(180deg, rgb(185, 243, 252) 11.2%, rgb(125, 89, 252) 91.1%); */
+    /* background: linear-gradient(0deg, rgb(120 135 177) 11.2%, rgb(125, 89, 252) 91.1%); */
+    border-color: transparent transparent rgb(125, 89, 252);
+    /* background-color: #b8c1d7; */
+    /* background: radial-gradient(circle at -8.9% 51.2%, rgb(255, 124, 0) 0%, rgb(255, 124, 0) 15.9%, rgb(255, 163, 77) 15.9%, rgb(255, 163, 77) 24.4%, rgb(19, 30, 37) 24.5%, rgb(19, 30, 37) 66%); */
 }
+
+header::before {
+    background-image: url('/Pictures/animbg.webp');
+    background-repeat: no-repeat;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.left {
+    position: absolute;
+    top: 20px;
+    left: 55px;
+    display: inline-block;
+    text-align: center;
+    Filter: invert(0);
+}
+
+.left img {
+    width: 120px;
+}
+
+.left div {
+    text-align: center;
+}
+
+.mid {
+    display: block;
+    width: 43%;
+    margin: 20px auto;
+    font-size: 30px;
+}
+
+.bus1img{
+    height: 100px;
+    width: 200px;
+    margin-top: 72px;
+    position: relative;
+    animation-name: bus1;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    /* animation-iteration-count: 1; */
+}
+
+@keyframes bus1 {
+    0%{
+        top: 0px;
+        left: 0px;
+    }
+    100%{
+        top: 0px;
+        left: 1470px;
+    }
+}
+
+
+.bus2img{
+    height: 100px;
+    width: 200px;
+    margin-top: -102px;
+    position: relative;
+    animation-name: bus1;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    /* animation-iteration-count: 1; */
+    animation-direction: reverse;
+    z-index: -1;
+}
+
+@keyframes bus2 {
+    0%{
+        top: 0px;
+        left: 1470px;
+    }
+    100%{
+        top: 0px;
+        left: 0px;
+    }
+}
+
+.navbar {
+    display: inline-block;
+}
+
+.navbar li {
+    display: inline-block;
+}
+
+.navbar li a {
+    color: black;
+    text-decoration: none;
+    font-size: 30px;
+    padding: 15px 20px;
+    transition: all 0.5s ease-in-out;
+}
+
+.navbar li a:hover,
+.navbar li a.active {
+    color: #7887b1;
+    text-decoration: none;
+    
+    
+}
+
+.right {
+    position: absolute;
+    top: 58px;
+    right: 60px;
+    display: inline-block;
+}
+
+.btn {
+    background-color: black;
+    color: white;
+    margin: 0px 20px;
+    padding: 10px 10px;
+    border: 1px solid gray;
+    border-radius: 15px;
+    font-size: 15px;
+    cursor: pointer;
+    font-family: 'Rajdhani', sans-serif;
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+}
+.btn:hover{
+    background-color: #7887b1;
+    border: 1px solid black;
+}
+
+.booking-form {
+    background: linear-gradient(180deg, rgb(185, 243, 252) 11.2%, rgb(125, 89, 252) 91.1%);
+    /* background-image: linear-gradient( rgb(185, 243, 252) 11.2% , rgb(125, 89, 252)85.1% , rgb(255, 255, 255)); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-top: 0px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 663px;
+}
+
+.booking-form h1 {
+    color: rgb(85 85 85);
+    margin-bottom: -50px;
+    font-size: 60px;
+}
+     
+.SD{
+    background-color: #29292d75;
+    border: 1px;
+    color: white;
+    border-radius: 5px;
+    padding: 15px;
+    margin-right: 90px;
+}
+
+::placeholder {
+    color: rgb(255, 255, 255);
+    opacity: 1;
+  }
+  
+        .booking-form form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+            height: 200px;
+            border: 1px solid gray; 
+            border-radius: 15px;
+            color: rgb(175, 13, 13);
+            background-color: #29292d75;
+            margin-bottom: 100px;
+        }
+
+        .booking-form form label,
+        input {
+            margin: 15px;
+            font-size: 15px;
+            font-weight: bold;
+            text-align: center;
+            color: rgb(0, 0, 0);
+
+        }
+
+        .booking-form form label{
+            color: rgb(255, 255, 255);
+            font-size: 35px;
+        }
+
+        #date{
+            width: 100%;
+        }
+
+        #search{
+            width: 150px;
+        }
+
+section {
+    height: 544px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+.options{
+    color: black;
+    text-align: center;
+    padding-right: 100px;
+    padding-top: -100px;
+}
+.line{
+    
+    width: 203px;
+    height: 1px;
+    background: rgb(69, 69, 69);
+    align-items: center;
+    margin: auto;
+    margin-right: 787px;
+}
+
+.line2{
+    
+    width: 710px;
+    height: 1px;
+    background: rgb(69, 69, 69);
+    align-items: center;
+    margin: auto;
+    margin-right: 787px;
+}
+p {
+    text-align: center;
+}   
+
+.faq{
+    color: black;
+    margin: -38px 35px;
+    padding: 50px;
+    font-size: 20px;
+}
+
+footer {
+    color: black;
+    padding: 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    margin-top: -6px;
+    background-color: rgb(125, 89, 252);
+    background-color: #7887b1;
+}
+
+footer a {
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+footer a:hover {
+    color: black;
+    cursor: pointer;
+}
+
+.pic{
+    padding: -41px;
+    margin: 210px;
+    margin-top: 10px;
+    padding-left: 272px;
+    padding-bottom: 8px;
+    color: black;
+    font-size: 20px;
+    font-weight: bolder;
+    height: inherit;
+}
+.features{
+    padding-right: 100px;
+}
+/* ======================================================  */
+
+/* Body & Image List Styles
+-------------------------------------------------------------- */
+
+    .img-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    }
+    .img-list li {
+    border: 5px solid transparent;
+    box-sizing: border-box;
+    width: 33.33%;
+    float: left;
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 40px;
+    margin-top: 30px;
+    }
+    .img-list img {
+    max-width: 100%;
+    }
+    
+    /* Image Placeholder Styles
+    -------------------------------------------------------------- */
+    .img-placeholder:before,
+    .img-placeholder:after {
+    content: "";
+    display: block;
+    }  
+    .img-placeholder {
+    background: #222;
+    box-shadow: 0 0 0 8px #222 inset, 0 0 0 9px #333 inset;
+    color: #444;
+    line-height: 0;
+    text-align: center;
+    display: block;
+    }
+    
+    /* The hover effect
+    -------------------------------------------------------------- */
+    .img-list li:before {
+    transition: all .5s ease;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #333;
+    transform: scale(0);
+    }
+    .img-list li:hover:before {
+    opacity: .5;
+    transform: scale(1);
+    }
+    .img-list li:after {
+    transition: all .6s ease .2s;
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+    border: 1px solid #aaa;
+    background: #000;
+    opacity: 0;
+    transform: scale(0);
+    }
+    .img-list li:hover:after {
+    opacity: .35;
+    transform: scale(1);
+    }

@@ -1,19 +1,30 @@
-body {
-    background: url("/Pictures/loginbg.jpeg");
-    background-size: cover;
+body{
+    /* background: url("https://images.wallpapersden.com/image/download/amazing-desert-hd-cool-aesthetic_bWpoammUmZqaraWkpJRmbmdlrWZlbWU.jpg"); */
+    background-image: url('/Pictures/signbg.jpg');
+    background-size:cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
-
-* {
-    color: white;
-    font-family: 'Rajdhani', sans-serif;
+/* *{
+    font-size: large;
+    color:aliceblue;
+    font-weight: 300;
+    font-family: Century gothic;
+} */
+.hehe{
+    display :flex;
+    justify-content:right;    
 }
 
-.hehe {
-    display: flex;
-    justify-content: right;
+
+
+
+* {
+    font-size: large;
+    font-weight: 300;
+    color: white;
+    font-family: 'Rajdhani', sans-serif;
 }
 
 .mid {
@@ -45,49 +56,97 @@ body {
     text-decoration: none;
 }
 
-input {
-    font-size: large;
+
+
+
+
+
+
+
+
+
+
+
+
+
+.home{
+    margin-right:80px;
+    margin-top:10px;
+   
+    background:rgba(255,255,255,0.1);
+    transition: box-shadow 0.3s;
+}
+.about{
+    margin-top:10px;
+    margin-right:60px;
+    width:90px;
+    height:30px;
+    border-radius:100px;
+    background:rgba(255,255,255,0.1);
+    transition: box-shadow 0.3s;
+}
+.log{
+    margin-top:10px;
+    margin-right:100px;
+    width:140px;
+    height:30px;
+    border-radius:100px;
+    background:rgba(255,255,255,0.1);
+    transition: box-shadow 0.3s;
+}
+.log:hover{
+    box-shadow: 11px 5px 5px rgb(110, 3, 163, 0.886);
+}
+.home:hover{
+    width:70px;
+    height:30px;
+    border-radius:100px;
+    box-shadow: 11px 5px 5px rgba(110, 3, 163, 0.886);
+}
+.about:hover{
+    box-shadow: 11px 5px 5px rgb(110, 3, 163, 0.886);
+}
+.sec1{
+   
+    
+    position:absolute;
+    min-height:90vh;
+    top:25%;
+    left:40%;
+    border-width:40px;
+    border-color:aliceblue;
+}
+input{
+    border-radius:100px;
+    height:40px;
+    width:300px;
+    color:aliceblue;
+    background:rgba(255,255,255,0.1);
+    margin-bottom:5%;
 }
 
-.sec1 {
-    position: absolute;
-    min-height: 90vh;
-    top: 25%;
-    left: 40%;
-    border-width: 40px;
-    border-color: aliceblue;
+#bt1{
+    left:30px;
+    width:100px;
+    border-radius:100px;
 }
-
-input {
+header{
+    font-size:50px;
+    color:aliceblue;
+    display:flex;
+    justify-content:center;
+    padding:10%;
+}
+.bt{
+    display:flex;
+    justify-content:center;
     border-radius: 100px;
-    height: 40px;
-    width: 300px;
+}
+::-webkit-input-placeholder{
     color: aliceblue;
-    background: rgba(255, 255, 255, 0.1);
-    margin-bottom: 5%;
 }
-
-#bt1 {
-    left: 30px;
-    width: 100px;
-    border-radius: 100px;
-}
-
-header {
-    font-size: 50px;
-    color: aliceblue;
-    display: flex;
-    justify-content: center;
-    padding: 10%;
-}
-
-.bt {
-    display: flex;
-    justify-content: center;
-    border-radius: 100px;
-}
-
-p {
-    display: flex;
-    justify-content: center;
+button{
+    margin-left:15px;
+    border-radius:100px;
+    background:rgba(255,255,255,0.1);
 }
