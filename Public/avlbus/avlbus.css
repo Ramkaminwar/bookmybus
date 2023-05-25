@@ -1,19 +1,5 @@
 
-        /* .box{
-            border: 2px solid rgb(199, 198, 198);
-            height: 90px;
-            display: flex;
-            width: 70%;
-            display: block;
-            margin: auto;
-            padding-top: 20px;
-            padding-left: 20px;
-            margin-top: 10px;
-            font-size: 40px;
-        } */
-
-        .mainbox{
-            border: 2px solid rgb(233, 5, 5);
+.mainbox{
             height: 800px;
             display: flex;
             width: 70%;
@@ -44,10 +30,6 @@
     margin: 0px;
     display: inline-block;
 }
-
-/* #box1{
-    display: block;
-} */
 
 body {
     margin: 0;
@@ -89,7 +71,7 @@ header::before {
 
 .mid {
     display: block;
-    width: 33%;
+    width: 43%;
     margin: 20px auto;
     font-size: 30px;
 }
@@ -105,7 +87,7 @@ header::before {
 .navbar li a {
     color: white;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 30px;
     padding: 15px 20px;
     transition: all 0.5s ease-in-out;
 }
@@ -119,8 +101,8 @@ header::before {
 
 .right {
     position: absolute;
-    top: 50px;
-    right: 55px;
+    top: 58px;
+    right: 60px;
     display: inline-block;
 }
 
@@ -163,4 +145,68 @@ header::before {
 }
 #box6{
     width: 100px;
+}
+
+.error{
+    color: white;
+    text-align: center;
+    border: 2px solid rgb(255, 255, 255);
+    height: auto;
+    display: flex;
+    width: 70%;
+    display: block;
+    margin: 100px auto;
+    padding: 25px;
+    font-size: 50px;
+    border-radius: 15px;
+    background-color: #464874;
+}
+
+#details{
+    border: 2px solid rgb(255, 255, 255);
+    height: auto;
+    display: flex;
+    width: 70%;
+    display: block;
+    margin: auto;
+    padding-top: 20px;
+    padding-left: 20px;
+    margin-top: 10px;
+    font-size: 30px;
+    background-color: #464874;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    transition: all 0.5s ease-in;
+    transition-timing-function: linear;
+}
+
+/* #details:hover{
+    width: 75%;
+    
+} */
+
+.bookbtn{
+    background-color: black;
+    color: white;
+    margin: 0px 20px;
+    padding: 10px 10px;
+    border: 1px solid gray;
+    border-radius: 15px;
+    font-size: 15px;
+    cursor: pointer;
+    font-family: 'Rajdhani', sans-serif;
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+    width: 150px;
+    text-align: center;
+    margin-left: 475px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+.bookbtn:hover {
+    background-color: #7887b1;
+    border: 1px solid black;
+    width: 185px;
+    height: auto;
 }

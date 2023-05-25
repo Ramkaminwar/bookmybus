@@ -17,7 +17,7 @@ fetch(`http://localhost/search_bus?source=${source}&desti=${desti}`)
       <div id="box4" class="cbox">Pick-up Time: <p>${element.pickup_time}</p> </div>
       <div id="box5" class="cbox">Drop Time:<p>${element.drop_time}</p>  </div>
       <div id="box6" class="cbox">Price: <p>${element.price}</p> </div>
-      <div class="btn" onclick=myFunction("${element.source}","${element.destination}")>Book Now</div>
+      <div class="bookbtn" onclick=myFunction("${element.source}","${element.destination}")>Book Now</div>
   </div>`);
     });
     if (post.length === 0) {
