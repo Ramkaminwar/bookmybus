@@ -10,16 +10,21 @@ fetch(`http://localhost/search_bus?source=${source}&desti=${desti}`)
   .then((post) => {
     console.log(post);
     post.forEach((element) => {
-      $("#box1").append(`<div class="box" id="box1">${element.Agency}</div>`);
-      $("#box2").append(`<div class="box" id="box2">${element.source}</div>`);
-      $("#box3").append(`<div class="box" id="box3">${element.destination}</div>`);
-      $("#box4").append(`<div class="box" id="box4">${element.pickup_time}</div>`);
-      $("#box5").append(`<div class="box" id="box5">${element.drop_time}</div>`);
-      $("#box6").append(`<div class="box" id="box6">${element.price}</div>`);
+      $("#buses").append(`<div id="details" class="mainbox">
+      <div id="box1" class="cbox">Agency Name: <p>${element.Agency}</p> </div>
+      <div id="box2" class="cbox">Source:<p>${element.source}</p>  </div>
+      <div id="box3" class="cbox">Destination:<p>${element.destination}</p>  </div>
+      <div id="box4" class="cbox">Pick-up Time: <p>${element.pickup_time}</p> </div>
+      <div id="box5" class="cbox">Drop Time:<p>${element.drop_time}</p>  </div>
+      <div id="box6" class="cbox">Price: <p>${element.price}</p> </div>
+      <div class="btn" onclick=myFunction("${element.source}","${element.destination}")>Book Now</div>
+  </div>`);
     });
+    if (post.length === 0) {
+      $("#buses").append(`<p class="error">No Buses Found</p>`);
+    }
   });
 
-
-  function myFunction() {
-    alert("\nCongratulations!!\nYour Ticket is Booked");
-  }
+function myFunction(a, b) {
+  alert(`\nCongratulations!!\nYour ${a} to ${b} Ticket is Booked`);
+}

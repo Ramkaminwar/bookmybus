@@ -50,6 +50,12 @@ app.get("/Search-Ticket", async function (req, res) {
   res.json(query);
 });
 
+app.post("/savedata", function (req, res) {
+  console.log(req.body.age);
+
+  res.send("You have Successfully Submited");
+});
+
 app.post("*", function (req, res) {
   res.send("You have posted a wrong Request", 404);
 });
