@@ -429,6 +429,13 @@ h1 {
     padding-top: -100px;
 }
 
+#optionsh2{
+    font-size: 30px;
+}
+.facility{
+    font-weight: bold;
+    font-weight:bolder;
+}
 .line {
     width: 203px;
     height: 1px;
@@ -456,6 +463,38 @@ p {
     margin: -38px 35px;
     padding: 50px;
     font-size: 20px;
+}
+
+
+.bot2{
+    margin: 5px;
+    display: flex;
+    height: 50px;
+    width: 50px;
+    border: 2px solid rebeccapurple;
+    background-color: #7887b1;
+    border-radius: 100px;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    /* transition-property: background-color;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out; */
+    /* transition-delay: 2s; */
+
+    /* transition: backgrond-color 2s ease-in-out 2s; */
+    transition: all 1s ease-in-out;
+}
+.bot2:hover{
+    background-color: rgba(211, 246, 140, 0.1);
+    color:black ;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    font-size: 35px;
 }
 
 footer {
