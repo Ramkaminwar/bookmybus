@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.js">
+    </script>
+
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/ui-lightness/jquery-ui.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="/bookbus/bookbus.css">
+
+    <title>Book Bus Ticket</title>
+
+</head>
+
+<body>
+    <header class="header">
+
+        <!-- left side for logo -->
+        <div class="left">
+            <img src="/Pictures/logo.png" alt="logo">
+        </div>
+
+        <!-- mid for navbar -->
+        <div class="mid">
+            <ul class="navbar">
+                <li> <a href="/index.html"> Home</a></li>
+                <li> <a href="/favRoutes/favRoutes.html">Special Routes</a></li>
+                <li> <a href="/about_us/aboutus.html"> About Us</a></li>
+                <li> <a href="/contactus/contactus.html"> Contact Us</a></li>
+            </ul>
+        </div>
+
+        <!-- right for buttons -->
+        <div class="right">
+            <a href="/signUp/signup.html" class="btn">Sign up / Login</a>
+        </div>
+
+    </header>
+ <div class="container" id="container">
+	
+	<div class="form-container sign-in-container">
+        <form action="#">
+            <div class="overlay1" >
+                <h1>Your Selected Bus</h1>
+
+                <div id="buses">
+                    
+                </div>
+
+            </div>
+        </form>
+	</div>
+    
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+                <form>
+                    <h1>Enter Your Details</h1>
+                    <div class="form">
+                        <input id="name" type="text" name="" placeholder="Enter your Name">
+                    </div>
+    
+                    <div class="form">
+                        <input id="email" type="email" name="" placeholder="Enter your Email ID">
+                    </div>
+    
+                    <div class="form">
+                        <input id="query" type="date" name="">
+                    </div>
+    
+                    <button id="submit_btn" class="btn" onclick=myFunction()>
+                        Book Ticket
+                    </button>
+
+                </form>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+
+<script src="/bookbus/bookbus.js"></script>
+
+</html>

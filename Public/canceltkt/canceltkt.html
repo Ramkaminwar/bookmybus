@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/avlbus/avlbus.css">
+    <link rel="stylesheet" href="/canceltkt/canceltkt.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js">
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.js">
@@ -14,7 +14,7 @@
 
     <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/ui-lightness/jquery-ui.css" rel="stylesheet" type="text/css" />
 
-    <title>Avaliable Buses</title>
+    <title>Cancel Ticket</title>
 
 </head>
 
@@ -30,7 +30,7 @@
         <div class="mid">
             <ul class="navbar">
                 <li> <a href="/index.html"> Home</a></li>
-                <li> <a href="/favRoutes/favRoutes.html"> Special Routes</a></li>
+                <li> <a href="/favRoutes/favRoutes.html">Special Routes</a></li>
                 <li> <a href="/about_us/aboutus.html"> About Us</a></li>
                 <li> <a href="/contactus/contactus.html"> Contact Us</a></li>
             </ul>
@@ -39,17 +39,40 @@
         <!-- right for buttons -->
         <div class="right">
             <a href="/signUp/signup.html" class="btn">Sign up / Login</a>
-            <!-- <a href="/signUp/signup.html" class="btn">Sign up</a>
-            <a href="/login/login.html" class="btn">Login</a> -->
         </div>
 
     </header>
-    <div id="buses">
+
+    <div class="container">
+        <h1 class="heading">To cancel your Ticket, Enter your details and Unique Ticket ID</h1>
+        <form>
+
+            <div class="form">
+                <input id="name" type="text" name="" placeholder="Enter Username">
+            </div>
+
+            <div class="form">
+                <input id="email" type="email" name="" placeholder="Enter your Email ID">
+            </div>
+
+            <div class="form">
+                <input id="Phone_no" type="tel" name="" placeholder="Enter your Phone Number">
+            </div>
 
 
+            <div class="form">
+                <input id="tktid" type="tel" name="" placeholder="Enter your Unique Ticket ID">
+            </div>
+
+            <button id="submit_btn" class="btn">
+                Cancel Ticket
+            </button>
+        </form>
     </div>
+
+    
 </body>
 
-<script src="avlbus.js"></script>
+<script src="/canceltkt/canceltkt.js"></script>
 
 </html>

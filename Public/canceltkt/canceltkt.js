@@ -18,13 +18,13 @@ fetch(`http://localhost/search_bus?source=${source}&desti=${desti}`)
       <div id="box5" class="cbox">Drop Time:<p>${element.drop_time}</p>  </div>
       <div id="box6" class="cbox">Price: <p>${element.price}</p> </div>
       <div class="bookbtn" onclick=myFunction("${element.source}","${element.destination}")>Book Now</div>
-      </div>`);
+  </div>`);
     });
     if (post.length === 0) {
       $("#buses").append(`<p class="error">No Buses Found</p>`);
     }
   });
-  
-  function myFunction(a, b) {
-    alert(`\nCongratulations!!\nYour ${a} to ${b} Ticket is Booked`);
+
+function myFunction(a, b) {
+  alert(`\nCongratulations!!\nYour ${a} to ${b} Ticket is Booked`);
 }

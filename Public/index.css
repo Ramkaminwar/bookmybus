@@ -202,6 +202,10 @@ body {
     /* background: radial-gradient(circle at -8.9% 51.2%, rgb(255, 124, 0) 0%, rgb(255, 124, 0) 15.9%, rgb(255, 163, 77) 15.9%, rgb(255, 163, 77) 24.4%, rgb(19, 30, 37) 24.5%, rgb(19, 30, 37) 66%); */
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+  
 header::before {
     background-image: url('/Pictures/animbg.webp');
     background-repeat: no-repeat;
@@ -233,7 +237,8 @@ header::before {
 
 .mid {
     display: block;
-    width: 43%;
+    /* width: 43%; */
+    width: 65%;
     margin: 20px auto;
     font-size: 30px;
 }
@@ -465,37 +470,6 @@ p {
     font-size: 20px;
 }
 
-
-.bot2{
-    margin: 5px;
-    display: flex;
-    height: 50px;
-    width: 50px;
-    border: 2px solid rebeccapurple;
-    background-color: #7887b1;
-    border-radius: 100px;
-    justify-content: center;
-    align-items: center;
-    color: aliceblue;
-    position: fixed;
-    right: 10px;
-    bottom: 10px;
-    /* transition-property: background-color;
-    transition-duration: 1s;
-    transition-timing-function: ease-in-out; */
-    /* transition-delay: 2s; */
-
-    /* transition: backgrond-color 2s ease-in-out 2s; */
-    transition: all 1s ease-in-out;
-}
-.bot2:hover{
-    background-color: rgba(211, 246, 140, 0.1);
-    color:black ;
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    font-size: 35px;
-}
 
 footer {
     color: black;
