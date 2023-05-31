@@ -5,6 +5,8 @@ const schedule_db = require("./schedule_db");
 const city_db = require("./city_db");
 const bodyParser = require("body-parser");
 const user_db = require("./user_db");
+const transaction_db = require("./transcations_db");
+const sendmail = require("./send_Confirmation");
 app.use(express.json());
 
 app.use(
@@ -18,7 +20,9 @@ app.use(express.static("public"));
 app.get("/", async function (req, res) {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "GET");
-  res.send("ram");
+  var MyJavaClass = Java.type("MyJavaClass");
+
+  res.send(calcInstance);
 });
 
 app.get("/city_list", async function (req, res) {
@@ -61,6 +65,25 @@ app.post("/savedata", function (req, res) {
     email: req.body.email,
   });
   data.save();
+  res.send("You have Successfully Submited");
+});
+
+app.post("/Booke_ticket", function (req, res) {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "POST");
+  const data = new transaction_db({
+    user_name: req.body.name,
+    age: req.body.Age,
+    phone_no: req.body.Phone_no,
+    email: req.body.email,
+    ticket_no: req.body.ticket_no,
+    source: req.body.source,
+    destination: req.body.destination,
+    date: req.body.date,
+  });
+  data.save();
+  const body = `Your Ticket Details:\nSource=${req.body.source} to Destination=${req.body.destination} on date:=${req.body.date}`;
+  sendmail(req.body.email, body);
   res.send("You have Successfully Submited");
 });
 
