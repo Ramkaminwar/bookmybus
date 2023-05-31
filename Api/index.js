@@ -20,7 +20,6 @@ app.use(express.static("public"));
 app.get("/", async function (req, res) {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "GET");
-  var MyJavaClass = Java.type("MyJavaClass");
 
   res.send(calcInstance);
 });
@@ -60,7 +59,7 @@ app.post("/savedata", function (req, res) {
   res.setHeader("Access-Control-Allow-Methods", "POST");
   const data = new user_db({
     user_name: req.body.name,
-    age: req.body.Age,
+    query: req.body.query,
     phone_no: req.body.Phone_no,
     email: req.body.email,
   });
@@ -73,18 +72,21 @@ app.post("/Booke_ticket", function (req, res) {
   res.setHeader("Access-Control-Allow-Methods", "POST");
   const data = new transaction_db({
     user_name: req.body.name,
-    age: req.body.Age,
     phone_no: req.body.Phone_no,
     email: req.body.email,
     ticket_no: req.body.ticket_no,
     source: req.body.source,
     destination: req.body.destination,
     date: req.body.date,
+    Agency: req.body.Agency,
+    pickup_time: req.body.pickup_time,
+    drop_time: req.body.drop_time,
+    price: req.body.price,
   });
   data.save();
   const body = `Hey , \nThank you for booking your bus ticket with Safar. Here are the ticket details for your upcoming trip from ${req.body.source} to ${req.body.destination} on ${req.body.date}`;
   sendmail(req.body.email, body);
-  res.send("You have Successfully Submited");
+  res.send("ok");
 });
 
 app.post("*", function (req, res) {

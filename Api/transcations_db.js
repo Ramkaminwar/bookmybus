@@ -5,10 +5,6 @@ const schema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  age: {
-    type: Number,
-    required: true,
-  },
   phone_no: {
     type: Number,
     required: true,
@@ -31,6 +27,22 @@ const schema = new mongoose.Schema({
   },
   date: {
     type: String,
+    required: true,
+  },
+  Agency: {
+    type: String,
+    required: true,
+  },
+  pickup_time: {
+    type: String,
+    required: true,
+  },
+  drop_time: {
+    type: String,
+    required: true,
+  },
+  price: {
+    type: Number,
     required: true,
   },
 });

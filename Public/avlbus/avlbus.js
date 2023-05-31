@@ -18,7 +18,7 @@ fetch(`http://localhost/search_bus?source=${source}&desti=${desti}`)
       <div id="box4" class="cbox">Pick-up Time: <p>${element.pickup_time}</p> </div>
       <div id="box5" class="cbox">Drop Time:<p>${element.drop_time}</p>  </div>
       <div id="box6" class="cbox">Price: <p>${element.price}</p> </div>
-      <div class="bookbtn" onclick=myFunction("${index}")>Book Now</div>
+      <div id="submit_btn")>Book Now</div>
   </div>`);
     }
     if (post.length === 0) {
@@ -65,34 +65,21 @@ function myFunction(a) {
   }
 }
 
-
-
 // Popup code
 
-const modal = document.querySelector('.modal');
-const modalOverlay = document.querySelector('.modal__overlay');
-const closeBtn = document.querySelector('.modal__close-btn');
-const discountBtn = document.querySelector('.bookbtn1');
+const modal = document.querySelector(".modal");
+const modalOverlay = document.querySelector(".modal__overlay");
+const closeBtn = document.querySelector(".modal__close-btn");
 
 // ---- ---- add active and cookie ---- ---- //
 const displayModal = () => {
-  if (document.cookie.indexOf('modalpopup') == -1) {
-    modal.classList.add('active');
-    modalOverlay.classList.add('active');
-  }
+  modal.classList.add("active");
+  modalOverlay.classList.add("active");
 };
-
-
-setTimeout(() => {
-  displayModal();
-}, 3000);
+$("#submit_btn").addEventListener("click", displayModal);
 
 // ---- ---- remove active ---- ---- //
-closeBtn.addEventListener('click', () => {
-  modal.classList.remove('active');
-  modalOverlay.classList.remove('active');
-});
-discountBtn.addEventListener('click', () => {
-  modal.classList.remove('active');
-  modalOverlay.classList.remove('active');
+closeBtn.addEventListener("click", () => {
+  modal.classList.remove("active");
+  modalOverlay.classList.remove("active");
 });
