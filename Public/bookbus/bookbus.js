@@ -33,9 +33,42 @@ function myFunction() {
   alert(`Your Ticket is Booked, Please Check your email for e-ticket`);
 }
 
+
+
 var now = new Date(),
   // minimum date the user can choose, in this case now and in the future
   minDate = now.toISOString().substring(0, 10);
 
 $("#date").prop("min", minDate);
 
+
+
+const modal = document.querySelector('.modal');
+const modalOverlay = document.querySelector('.modal__overlay');
+const closeBtn = document.querySelector('.modal__close-btn');
+const discountBtn = document.querySelector('.bookbtn');
+
+// ---- ---- add active and cookie ---- ---- //
+const displayModal = () => {
+  if (document.cookie.indexOf('modalpopup') == -1) {
+    modal.classList.add('active');
+    modalOverlay.classList.add('active');
+  }
+};
+
+setTimeout(() => {
+  displayModal();
+},);
+// setTimeout(() => {
+//   displayModal();
+// }, 3000);
+
+// ---- ---- remove active ---- ---- //
+closeBtn.addEventListener('click', () => {
+  modal.classList.remove('active');
+  modalOverlay.classList.remove('active');
+});
+discountBtn.addEventListener('click', () => {
+  modal.classList.remove('active');
+  modalOverlay.classList.remove('active');
+});

@@ -10,7 +10,13 @@
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.js">
     </script>
-
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+crossorigin="anonymous"
+referrerpolicy="no-referrer"
+/>
 <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/ui-lightness/jquery-ui.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="/bookbus/bookbus.css">
 
@@ -21,12 +27,11 @@
 <body>
     <header class="header">
 
-        <!-- left side for logo -->
+
         <div class="left">
             <img src="/Pictures/logo.png" alt="logo">
         </div>
 
-        <!-- mid for navbar -->
         <div class="mid">
             <ul class="navbar">
                 <li> <a href="/index.html"> Home</a></li>
@@ -36,23 +41,21 @@
             </ul>
         </div>
 
-        <!-- right for buttons -->
         <div class="right">
             <a href="/signUp/signup.html" class="btn">Sign up / Login</a>
         </div>
 
     </header>
+<!-- 
  <div class="container" id="container">
 	
 	<div class="form-container sign-in-container">
         <form action="#">
             <div class="overlay1" >
                 <h1>Your Selected Bus</h1>
-
                 <div id="buses">
                     
                 </div>
-
             </div>
         </form>
 	</div>
@@ -82,6 +85,40 @@
 			</div>
 		</div>
 	</div>
+</div> -->
+
+<div class="modal__overlay"></div>
+<div class="modal">
+ <div class="modal__close-btn">
+   <i class="fa-solid fa-xmark"></i>
+ </div>
+ <div class="modal__left">
+   <p class="sale">Special<span>Sale</span></p>
+   <div class="modal__discount">
+     <p>Save up to<span>15%</span></p>
+   </div>
+ </div>
+ <div class="modal__right">
+   <p class="modal__text">
+    <h1>Enter Your Details</h1>
+    <div class="form">
+       <input id="name" type="text" name="" placeholder="Enter your Name">
+    </div>
+    
+    <div class="form">
+        <input id="email" type="email" name="" placeholder="Enter your Email ID">
+    </div>
+    
+    <div class="form">
+        <input id="query" type="date" name="">
+    </div>
+</p>
+    
+    
+    <p class="modal__info">To book Bus Click below button</p>
+   <!-- <a class="modal__button">Book Ticket</a> -->
+   <a class="bookbtn1">Book Ticket</a>
+ </div>
 </div>
 </body>
 
