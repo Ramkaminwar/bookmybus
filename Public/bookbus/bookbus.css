@@ -39,7 +39,6 @@ body {
 }
 
 header::before {
-    /* background-image: url('/Pictures/bg.jpg'); */
     background-repeat: no-repeat;
     background: linear-gradient(to top, #505285 0%, #585e92 12%, #65689f 25%, #7474b0 37%, #7e7ebb 50%, #8389c7 62%, #9795d4 75%, #a2a1dc 87%, #b5aee4 100%);
     content: "";
@@ -150,7 +149,6 @@ h1 {
 }
 
 form {
-    /* background-color: #7b90b1; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -178,7 +176,7 @@ input {
 }
 
 .container {
-    background-color: #fff;
+    background-color: #8b94b1;
     border-radius: 10px;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     position: relative;
@@ -227,7 +225,6 @@ input {
 }
 
 .overlay {
-    /* background: linear-gradient(to right, #7c809d, #000000); */
     background: linear-gradient(to right, #7c809d, #7c90b1);
     background-repeat: no-repeat;
     background-size: cover;
@@ -240,8 +237,6 @@ input {
 }
 
 .overlay1 {
-    /* background: linear-gradient(to right,  #000000,#9ca2c7); */
-    background: linear-gradient(to right, #7c91b1, #8f96b2);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0 0;
@@ -265,4 +260,130 @@ input {
     width: 50%;
     transform: translateX(0);
     transition: transform 0.6s ease-in-out;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, calc(-50% - 10px));
+    display: flex;
+    min-height: 700px;
+    font-family: 'Roboto', sans-serif;
+    background-color: #8b94b1;
+    border-radius: 12px;
+    box-shadow: 0 5px 26px -8px rgba(0, 0, 0, 0.3);
+    z-index: 20;
+    transition: all 0.4s ease;
+    opacity: 0;
+    pointer-events: none;
+    margin-top: 50px;
+}
+
+.modal.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%);
+}
+
+.modal__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    pointer-events: none;
+    transition: all 0.4s ease;
+    opacity: 0;
+}
+
+.modal__overlay.active {
+    opacity: 1;
+}
+
+.modal__close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.modal__left {
+    text-align: center;
+    font-size: 24px;
+    text-transform: uppercase;
+    background-color: #a4aec9;
+    color: #fefefe;
+    border-radius: 12px;
+    box-shadow: 17px 0 17px -8px rgba(0, 0, 0, 0.3);
+    padding: 26px 20px;
+}
+
+.modal__left span {
+    display: block;
+    font-size: 36px;
+}
+
+.sale {
+    margin-top: 240px;
+}
+
+.modal__discount {
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 3px;
+    margin-top: 32px;
+}
+
+.modal__discount span {
+    font-size: 60px;
+}
+
+.modal__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 32px;
+}
+
+.modal__text {
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+}
+
+.modal__info {
+    color: #222;
+    margin-bottom: 12px;
+    align-self: center;
+}
+
+.bookbtn1 {
+    align-self: center;
+    background-color: black;
+    color: white;
+    padding: 10px 32px;
+    border: 1px solid gray;
+    border-radius: 15px;
+    font-size: 18px;
+    cursor: pointer;
+    font-family: 'Rajdhani', sans-serif;
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+    width: 150px;
+    text-align: center;
+}
+
+.bookbtn:hover1 {
+    background-color: #7887b1;
+    border: 1px solid black;
+    width: 165px;
+    height: auto;
 }

@@ -18,7 +18,7 @@ fetch(`http://localhost/search_bus?source=${source}&desti=${desti}`)
       <div id="box4" class="cbox">Pick-up Time: <p>${element.pickup_time}</p> </div>
       <div id="box5" class="cbox">Drop Time:<p>${element.drop_time}</p>  </div>
       <div id="box6" class="cbox">Price: <p>${element.price}</p> </div>
-      <div class="btn" onclick=myFunction("${index}")>Book Now</div>
+      <div id="submit_btn")>Book Now</div>
   </div>`);
     }
     if (post.length === 0) {
@@ -42,7 +42,7 @@ function myFunction(a) {
     urlencoded.append("name", "Kedar");
     urlencoded.append("Age", "20");
     urlencoded.append("Phone_no", "8390883312");
-    urlencoded.append("email", "202151047@iiitvadodara.ac.in");
+    urlencoded.append("email", "ramkaminwar411@gmail.com");
     urlencoded.append("source", finaldata[a].source);
     urlencoded.append("destination", finaldata[a].destination);
     urlencoded.append("date", document.querySelector("#box7").value);
@@ -64,3 +64,22 @@ function myFunction(a) {
       .catch((error) => alert("Error Ocurred"));
   }
 }
+
+// Popup code
+
+const modal = document.querySelector(".modal");
+const modalOverlay = document.querySelector(".modal__overlay");
+const closeBtn = document.querySelector(".modal__close-btn");
+
+// ---- ---- add active and cookie ---- ---- //
+const displayModal = () => {
+  modal.classList.add("active");
+  modalOverlay.classList.add("active");
+};
+$("#submit_btn").addEventListener("click", displayModal);
+
+// ---- ---- remove active ---- ---- //
+closeBtn.addEventListener("click", () => {
+  modal.classList.remove("active");
+  modalOverlay.classList.remove("active");
+});

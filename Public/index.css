@@ -237,8 +237,8 @@ header::before {
 
 .mid {
     display: block;
-    /* width: 43%; */
-    width: 65%;
+    width: 43%;
+    /* width: 58%; */
     margin: 20px auto;
     font-size: 30px;
 }

@@ -9,7 +9,6 @@ const transaction_db = require("./transcations_db");
 const sendmail = require("./send_Confirmation");
 app.use(express.json());
 
-("use strict");
 app.use(
   bodyParser.urlencoded({
     extended: true,
@@ -73,16 +72,19 @@ app.post("/Booke_ticket", function (req, res) {
   res.setHeader("Access-Control-Allow-Methods", "POST");
   const data = new transaction_db({
     user_name: req.body.name,
-    age: req.body.Age,
     phone_no: req.body.Phone_no,
     email: req.body.email,
     ticket_no: req.body.ticket_no,
     source: req.body.source,
     destination: req.body.destination,
     date: req.body.date,
+    Agency: req.body.Agency,
+    pickup_time: req.body.pickup_time,
+    drop_time: req.body.drop_time,
+    price: req.body.price,
   });
   data.save();
-  const body = `Your Ticket Details:\nSource is ${req.body.source} to Destination is ${req.body.destination} on date:=${req.body.date}`;
+  const body = `Hey , \nThank you for booking your bus ticket with Safar. Here are the ticket details for your upcoming trip from ${req.body.source} to ${req.body.destination} on ${req.body.date}`;
   sendmail(req.body.email, body);
   res.send("ok");
 });

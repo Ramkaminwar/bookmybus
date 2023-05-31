@@ -2,14 +2,15 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const source = urlParams.get("mycity1");
 const desti = urlParams.get("mycity2");
-
+var finaldata = "";
+var a = null;
 fetch(`http://localhost/search_bus?source=${source}&desti=${desti}`)
   .then((buses) => {
     return buses.json();
   })
   .then((post) => {
-    console.log(post);
-    post.forEach((element) => {
+    finaldata = post;
+    post.forEach((element, index) => {
       $("#buses").append(`<div id="details" class="mainbox">
       <div id="box1" class="cbox">Agency Name: <p>${element.Agency}</p> </div>
       <div id="box2" class="cbox">Source:<p>${element.source}</p>  </div>
@@ -17,7 +18,7 @@ fetch(`http://localhost/search_bus?source=${source}&desti=${desti}`)
       <div id="box4" class="cbox">Pick-up Time: <p>${element.pickup_time}</p> </div>
       <div id="box5" class="cbox">Drop Time:<p>${element.drop_time}</p>  </div>
       <div id="box6" class="cbox">Price: <p>${element.price}</p> </div>
-      <div class="bookbtn" onclick=myFunction("${element.source}","${element.destination}")>Book Now</div>
+      <div class="submit_btn" onclick="displayModal(${index})">Select This</div>
   </div>`);
     });
     if (post.length === 0) {
@@ -34,7 +35,58 @@ function myFunction() {
 }
 
 var now = new Date(),
-  // minimum date the user can choose, in this case now and in the future
   minDate = now.toISOString().substring(0, 10);
+$("#query").prop("min", minDate);
 
-$("#date").prop("min", minDate);
+const modal = document.querySelector(".modal");
+const modalOverlay = document.querySelector(".modal__overlay");
+const closeBtn = document.querySelector("#modal__close-btn");
+
+// ---- ---- add active and cookie ---- ---- //
+const displayModal = (b) => {
+  a = b;
+  modal.classList.add("active");
+  modalOverlay.classList.add("active");
+};
+closeBtn.addEventListener("click", () => {
+  modal.classList.remove("active");
+  modalOverlay.classList.remove("active");
+});
+
+function myFunction() {
+  if (document.querySelector("#query").value === "") {
+    alert("Date Not Provided");
+  } else {
+    var myHeaders = new Headers();
+    console.log(finaldata);
+    myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
+    var urlencoded = new URLSearchParams();
+    urlencoded.append("name", document.querySelector("#name").value);
+    urlencoded.append("Phone_no", "8390883312");
+    urlencoded.append("email", document.querySelector("#email").value);
+    urlencoded.append("source", source);
+    urlencoded.append("destination", desti);
+    urlencoded.append("date", document.querySelector("#query").value);
+    urlencoded.append("Agency", finaldata[a].Agency);
+    urlencoded.append("ticket_no", "639");
+    urlencoded.append("pickup_time", finaldata[a].pickup_time);
+    urlencoded.append("drop_time", finaldata[a].drop_time);
+    urlencoded.append("price", finaldata[a].price);
+
+    var requestOptions = {
+      method: "POST",
+      headers: myHeaders,
+      body: urlencoded,
+      redirect: "follow",
+    };
+    fetch("httP://localhost/Booke_ticket", requestOptions)
+      .then((response) => response.text())
+      .then((result) => {
+        alert(
+          `\nCongratulations!!\nYour ${finaldata[a].source} to ${finaldata[a].destination} Ticket of price ${finaldata[a].price} is Booked`
+        );
+        console.log(result);
+      })
+      .catch((error) => alert("Error Ocurred"));
+  }
+}
