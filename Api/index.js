@@ -82,7 +82,7 @@ app.post("/Booke_ticket", function (req, res) {
     date: req.body.date,
   });
   data.save();
-  const body = `Your Ticket Details:\nSource=${req.body.source} to Destination=${req.body.destination} on date:=${req.body.date}`;
+  const body = `Hey , \nThank you for booking your bus ticket with Safar. Here are the ticket details for your upcoming trip from ${req.body.source} to ${req.body.destination} on ${req.body.date}`;
   sendmail(req.body.email, body);
   res.send("You have Successfully Submited");
 });

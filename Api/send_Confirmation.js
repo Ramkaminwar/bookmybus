@@ -6,14 +6,14 @@ const sendmail = (email, body) => {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "kedardeshmukh2003@gmail.com",
-      pass: "bezuscpzorrjdoxc",
+      user: "bookmybus.safar@gmail.com",
+      pass: "cekfzwwadtzmwfcm",
     },
   });
 
   // send mail with defined transport object
   const mailOptions = {
-    from: "kedardeshmukh2003@gmail.com",
+    from: "bookmybus.safar@gmail.com",
     to: email,
     subject: "About Ticket Booking",
     text: body,
