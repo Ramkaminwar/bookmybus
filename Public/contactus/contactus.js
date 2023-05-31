@@ -4,7 +4,7 @@ btn.addEventListener("click", submitform);
 
 function submitform() {
   const name = document.querySelector("#name").value;
-  const age = document.querySelector("#Age").value;
+  const query = document.querySelector("#query").value;
   const phone_no = document.querySelector("#Phone_no").value;
   const email = document.querySelector("#email").value;
   var myHeaders = new Headers();
@@ -12,7 +12,7 @@ function submitform() {
 
   var urlencoded = new URLSearchParams();
   urlencoded.append("name", name);
-  urlencoded.append("Age", age);
+  urlencoded.append("query", query);
   urlencoded.append("Phone_no", phone_no);
   urlencoded.append("email", email);
 
@@ -25,8 +25,9 @@ function submitform() {
 
   fetch("httP://localhost/savedata", requestOptions)
     .then((response) => response.text())
-    .then((result) => alert("Submitted Successfully"))
+    .then((result) => {
+      alert("Submitted Successfully");
+      location.replace("http://127.0.0.1:5500");
+    })
     .catch((error) => alert("Error Ocurred"));
 }
-
-

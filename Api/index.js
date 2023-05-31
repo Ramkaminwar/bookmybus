@@ -9,6 +9,7 @@ const transaction_db = require("./transcations_db");
 const sendmail = require("./send_Confirmation");
 app.use(express.json());
 
+("use strict");
 app.use(
   bodyParser.urlencoded({
     extended: true,
@@ -20,7 +21,6 @@ app.use(express.static("public"));
 app.get("/", async function (req, res) {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "GET");
-  var MyJavaClass = Java.type("MyJavaClass");
 
   res.send(calcInstance);
 });
@@ -60,7 +60,7 @@ app.post("/savedata", function (req, res) {
   res.setHeader("Access-Control-Allow-Methods", "POST");
   const data = new user_db({
     user_name: req.body.name,
-    age: req.body.Age,
+    query: req.body.query,
     phone_no: req.body.Phone_no,
     email: req.body.email,
   });
@@ -82,9 +82,9 @@ app.post("/Booke_ticket", function (req, res) {
     date: req.body.date,
   });
   data.save();
-  const body = `Your Ticket Details:\nSource=${req.body.source} to Destination=${req.body.destination} on date:=${req.body.date}`;
+  const body = `Your Ticket Details:\nSource is ${req.body.source} to Destination is ${req.body.destination} on date:=${req.body.date}`;
   sendmail(req.body.email, body);
-  res.send("You have Successfully Submited");
+  res.send("ok");
 });
 
 app.post("*", function (req, res) {

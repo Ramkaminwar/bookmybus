@@ -5,8 +5,8 @@ const schema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  age: {
-    type: Number,
+  query: {
+    type: String,
     required: true,
   },
   phone_no: {

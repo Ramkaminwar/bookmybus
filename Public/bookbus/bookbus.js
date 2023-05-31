@@ -38,4 +38,3 @@ var now = new Date(),
   minDate = now.toISOString().substring(0, 10);
 
 $("#date").prop("min", minDate);
-
