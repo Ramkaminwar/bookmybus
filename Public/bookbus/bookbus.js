@@ -18,7 +18,7 @@ fetch(`http://localhost/search_bus?source=${source}&desti=${desti}`)
       <div id="box4" class="cbox">Pick-up Time: <p>${element.pickup_time}</p> </div>
       <div id="box5" class="cbox">Drop Time:<p>${element.drop_time}</p>  </div>
       <div id="box6" class="cbox">Price: <p>${element.price}</p> </div>
-      <div class="submit_btn" onclick="displayModal(${index})">Select This</div>
+      <div class="submit_btn" onclick="displayModal(${index})">Book Bus</div>
   </div>`);
     });
     if (post.length === 0) {
@@ -42,6 +42,10 @@ const modal = document.querySelector(".modal");
 const modalOverlay = document.querySelector(".modal__overlay");
 const closeBtn = document.querySelector("#modal__close-btn");
 
+// Random number generator
+// let x = Math.floor((Math.random() * 100) + 1);
+// document.getElementById("ticket_no").innerHTML = x;
+
 // ---- ---- add active and cookie ---- ---- //
 const displayModal = (b) => {
   a = b;
@@ -61,14 +65,14 @@ function myFunction() {
     console.log(finaldata);
     myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
     var urlencoded = new URLSearchParams();
-    urlencoded.append("name", document.querySelector("#name").value);
-    urlencoded.append("Phone_no", "8390883312");
+    urlencoded.append("user_name", document.querySelector("#user_name").value);
+    urlencoded.append("phone_no", document.querySelector("#phone_no").value);
     urlencoded.append("email", document.querySelector("#email").value);
     urlencoded.append("source", source);
     urlencoded.append("destination", desti);
     urlencoded.append("date", document.querySelector("#query").value);
     urlencoded.append("Agency", finaldata[a].Agency);
-    urlencoded.append("ticket_no", "639");
+    urlencoded.append("ticket_no", 100);
     urlencoded.append("pickup_time", finaldata[a].pickup_time);
     urlencoded.append("drop_time", finaldata[a].drop_time);
     urlencoded.append("price", finaldata[a].price);

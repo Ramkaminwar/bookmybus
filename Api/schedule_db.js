@@ -25,6 +25,10 @@ const schema = new mongoose.Schema({
     type: Number,
     required: true,
   },
+  user_name:{
+    type: String,
+    required: true,
+  },
 });
 
 const schedule_db = new mongoose.model("schedule_db", schema);

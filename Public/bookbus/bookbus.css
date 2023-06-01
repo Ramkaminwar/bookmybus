@@ -69,6 +69,7 @@ header::before {
 
 .mid {
     display: block;
+    width: 43%;
     margin: 20px auto;
     font-size: 30px;
 }
@@ -123,29 +124,118 @@ header::before {
     border: 1px solid black;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
-* {
-    box-sizing: border-box;
-    font-family: 'Rajdhani', sans-serif;
-    font-size: large;
-    color: black;
+/*  */
+
+
+#box1{
+  width: 260px;
+}
+#box2{
+  width: 190px;
+}
+#box3{
+  width: 190px;
+}
+#box4{
+  width: 180px;
+}
+#box5{
+  width: 180px;
+}
+#box6{
+  width: 100px;
 }
 
-body {
-    background: #f6f5f7;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    font-family: 'Montserrat', sans-serif;
-    background-color: #b8c2d7;
-    color: black;
+.error{
+  color: white;
+  text-align: center;
+  border: 2px solid rgb(255, 255, 255);
+  height: auto;
+  display: flex;
+  width: 70%;
+  display: block;
+  margin: 100px auto;
+  padding: 25px;
+  font-size: 50px;
+  border-radius: 15px;
+  background-color: #464874;
 }
+
+#details{
+  border: 2px solid rgb(255, 255, 255);
+  height: auto;
+  display: flex;
+  width: 70%;
+  display: block;
+  margin: auto;
+  padding-top: 20px;
+  padding-left: 20px;
+  margin-top: 10px;
+  font-size: 30px;
+  background-color: #464874;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  transition: all 0.5s ease-in;
+  transition-timing-function: linear;
+}
+
+/* #details:hover{
+  width: 75%;
+  
+} */
+
+.bookbtn{
+  background-color: black;
+  color: white;
+  margin: 0px 20px;
+  padding: 10px 10px;
+  border: 1px solid gray;
+  border-radius: 15px;
+  font-size: 15px;
+  cursor: pointer;
+  font-family: 'Rajdhani', sans-serif;
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+  width: 150px;
+  text-align: center;
+  margin-left: 475px;
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+
+.bookbtn:hover {
+  background-color: #7887b1;
+  border: 1px solid black;
+  width: 165px;
+  height: auto;
+}
+
+
+#box7 {
+  display: block;
+  margin: 15px auto;
+  border: 2px solid black;
+  border-radius: 5px;
+  width: 260px;
+  text-align: center;
+  font-size: 18px;
+  padding: 7px;
+  font-family: 'Rajdhani', sans-serif;
+}
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
 h1 {
-    font-size: 30px;
-    font-weight: bold;
-    margin: 60px;
+  box-sizing: border-box;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: large;
+  color: black;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 60px;
+  align-self: center;
 }
 
 form {
@@ -263,22 +353,54 @@ input {
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+.overlay1 {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+  color: #FFFFFF;
+  position: relative;
+  left: 0%;
+  height: 100%;
+  width: 200%;
+}
+
+.overlay-panel {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+}
+
+
 .modal {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, calc(-50% - 10px));
-    display: flex;
-    min-height: 700px;
-    font-family: 'Roboto', sans-serif;
-    background-color: #8b94b1;
-    border-radius: 12px;
-    box-shadow: 0 5px 26px -8px rgba(0, 0, 0, 0.3);
-    z-index: 20;
-    transition: all 0.4s ease;
-    opacity: 0;
-    pointer-events: none;
-    margin-top: 50px;
+box-sizing: border-box;
+font-family: 'Rajdhani', sans-serif;
+font-size: large;
+color: black;
+width: 600px;
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, calc(-50% - 10px));
+display: flex;
+min-height: 700px;
+background-color: #8b94b1;
+border-radius: 12px;
+box-shadow: 0 5px 26px -8px rgba(0, 0, 0, 0.3);
+z-index: 20;
+transition: all 0.4s ease;
+opacity: 0;
+pointer-events: none;
+margin-top: 50px;
 }
 
 .modal.active {
@@ -331,14 +453,22 @@ input {
 }
 
 .sale {
-    margin-top: 240px;
+  box-sizing: border-box;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: large;
+  color: black;
+margin-top: 240px;
 }
 
 .modal__discount {
-    font-size: 14px;
-    font-weight: 300;
-    letter-spacing: 3px;
-    margin-top: 32px;
+  box-sizing: border-box;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: large;
+  color: black;
+font-size: 14px;
+font-weight: 300;
+letter-spacing: 3px;
+margin-top: 32px;
 }
 
 .modal__discount span {
@@ -381,9 +511,35 @@ input {
     text-align: center;
 }
 
-.bookbtn:hover1 {
+.bookbtn1:hover {
     background-color: #7887b1;
     border: 1px solid black;
     width: 165px;
     height: auto;
+}
+
+
+.submit_btn {
+  background-color: black;
+  color: white;
+  padding: 10px 32px;
+  border: 1px solid gray;
+  border-radius: 15px;
+  font-size: 18px;
+  cursor: pointer;
+  font-family: 'Rajdhani', sans-serif;
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+  width: 150px;
+  text-align: center;
+  margin-left: 475px;
+  margin-bottom: 10px;
+  align-self: center;
+}
+
+.submit_btn:hover {
+  background-color: #7887b1;
+  border: 1px solid black;
+  width: 165px;
+  height: auto;
 }

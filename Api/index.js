@@ -43,7 +43,6 @@ app.get("/search_bus", async function (req, res) {
     destination: destinationVariable,
   });
   console.log(data);
-
   res.json(data);
 });
 
@@ -58,9 +57,9 @@ app.post("/savedata", function (req, res) {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "POST");
   const data = new user_db({
-    user_name: req.body.name,
+    user_name: req.body.user_name,
     query: req.body.query,
-    phone_no: req.body.Phone_no,
+    phone_no: req.body.phone_no,
     email: req.body.email,
   });
   data.save();
@@ -71,8 +70,8 @@ app.post("/Booke_ticket", function (req, res) {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "POST");
   const data = new transaction_db({
-    user_name: req.body.name,
-    phone_no: req.body.Phone_no,
+    user_name: req.body.user_name,
+    phone_no: req.body.phone_no,
     email: req.body.email,
     ticket_no: req.body.ticket_no,
     source: req.body.source,
@@ -84,7 +83,43 @@ app.post("/Booke_ticket", function (req, res) {
     price: req.body.price,
   });
   data.save();
-  const body = `Hey , \nThank you for booking your bus ticket with Safar. Here are the ticket details for your upcoming trip from ${req.body.source} to ${req.body.destination} on ${req.body.date}`;
+  
+  const body = `
+  
+  Safar
+  Dear ${req.body.user_name},
+  Thank you for choosing ${req.body.Agency} for your bus travel. We are delighted to provide you with the details of your upcoming trip.
+
+
+  Please find the following information regarding your ticket:
+
+\tAgency Name: ${req.body.Agency}
+\tTicket Number: ${req.body.ticket_no}
+
+Bus Details:
+\n\tDeparture Date: ${req.body.date}
+\n\tDeparture Time: ${req.body.pickup_time}
+\n\tDeparture Point: ${req.body.source}
+\n\tArrival Date: ${req.body.date}
+\n\tArrival Time: ${req.body.drop_time}
+\n\tArrival Point: ${req.body.destination}
+
+Passenger Details:
+\n\tPassenger Name: ${req.body.user_name}
+\n\tContact Number: ${req.body.phone_no}
+\n\tEmail Address: ${req.body.email}
+
+Please note that it is essential to arrive at the departure point at least 30 Minutes before the scheduled departure time. 
+Kindly carry your valid identification documents and this ticket with you for smooth boarding procedures.
+
+In case of any changes or queries regarding your travel arrangements, please feel free to contact our customer service team. We are available 24*7.
+
+We wish you a pleasant journey and hope you have a wonderful travel experience with us. Thank you for choosing ${req.body.Agency}, Safar .
+
+Best regards,
+\tSafar
+\t${req.body.Agency}`;
+
   sendmail(req.body.email, body);
   res.send("ok");
 });

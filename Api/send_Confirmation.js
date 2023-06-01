@@ -15,7 +15,7 @@ const sendmail = (email, body) => {
   const mailOptions = {
     from: "bookmybus.safar@gmail.com",
     to: email,
-    subject: "About Ticket Booking",
+    subject: "Safar Ticket",
     text: body,
   };
 
