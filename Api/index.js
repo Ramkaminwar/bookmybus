@@ -95,6 +95,7 @@ app.post("/Booke_ticket", function (req, res) {
 
 \tAgency Name: ${req.body.Agency}
 \tTicket Number: ${req.body.ticket_no}
+\tFair: ${req.body.price}
 
 Bus Details:
 \n\tDeparture Date: ${req.body.date}
