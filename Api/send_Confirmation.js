@@ -16,7 +16,7 @@ const sendmail = (email, body) => {
     from: "bookmybus.safar@gmail.com",
     to: email,
     subject: "Safar Ticket",
-    text: body,
+    html: body,
   };
 
   transporter.sendMail(mailOptions, function (error, info) {

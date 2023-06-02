@@ -42,11 +42,11 @@ const modal = document.querySelector(".modal");
 const modalOverlay = document.querySelector(".modal__overlay");
 const closeBtn = document.querySelector("#modal__close-btn");
 
-// Random number generator
-// let x = Math.floor((Math.random() * 100) + 1);
-// document.getElementById("ticket_no").innerHTML = x;
+const random = () => {
+  let x = Math.floor(Math.random() * 100000 + 1);
+  return x;
+};
 
-// ---- ---- add active and cookie ---- ---- //
 const displayModal = (b) => {
   a = b;
   modal.classList.add("active");
@@ -72,7 +72,7 @@ function myFunction() {
     urlencoded.append("destination", desti);
     urlencoded.append("date", document.querySelector("#query").value);
     urlencoded.append("Agency", finaldata[a].Agency);
-    urlencoded.append("ticket_no", 100);
+    urlencoded.append("ticket_no", random());
     urlencoded.append("pickup_time", finaldata[a].pickup_time);
     urlencoded.append("drop_time", finaldata[a].drop_time);
     urlencoded.append("price", finaldata[a].price);
