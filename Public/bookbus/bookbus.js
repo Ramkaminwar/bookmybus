@@ -42,10 +42,6 @@ const modal = document.querySelector(".modal");
 const modalOverlay = document.querySelector(".modal__overlay");
 const closeBtn = document.querySelector("#modal__close-btn");
 
-// Random number generator
-// let x = Math.floor((Math.random() * 100) + 1);
-// document.getElementById("ticket_no").innerHTML = x;
-
 // ---- ---- add active and cookie ---- ---- //
 const displayModal = (b) => {
   a = b;
