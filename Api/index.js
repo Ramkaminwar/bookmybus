@@ -83,43 +83,105 @@ app.post("/Booke_ticket", function (req, res) {
     price: req.body.price,
   });
   data.save();
-  
+
   const body = `
-  
-  Safar
-  Dear ${req.body.user_name},
+  <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ticket Confirmation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    h1, h2, h3 {
+      text-align: center;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #f2f2f200;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Ticket Confirmation</h1>
+  <hr>
+
+  <h2>Dear ${req.body.user_name},</h2>
+
+  <p>Dear ${req.body.user_name},
   Thank you for choosing ${req.body.Agency} for your bus travel. We are delighted to provide you with the details of your upcoming trip.
+</p>
 
 
-  Please find the following information regarding your ticket:
+  <h3>Passenger Details:</h3>
+  <table>
+    <tr>
+      <th>Name:</th>
+      <td>${req.body.user_name}</td>
+    </tr>
+    <tr>
+      <th>Email:</th>
+      <td>${req.body.email}</td>
+    </tr>
+    <tr>
+      <th>Contact Number:</th>
+      <td>${req.body.phone_no}</td>
+    </tr>
+  </table>
 
-\tAgency Name: ${req.body.Agency}
-\tTicket Number: ${req.body.ticket_no}
-\tFair: ${req.body.price}
-
-Bus Details:
-\n\tDeparture Date: ${req.body.date}
-\n\tDeparture Time: ${req.body.pickup_time}
-\n\tDeparture Point: ${req.body.source}
-\n\tArrival Date: ${req.body.date}
-\n\tArrival Time: ${req.body.drop_time}
-\n\tArrival Point: ${req.body.destination}
-
-Passenger Details:
-\n\tPassenger Name: ${req.body.user_name}
-\n\tContact Number: ${req.body.phone_no}
-\n\tEmail Address: ${req.body.email}
-
-Please note that it is essential to arrive at the departure point at least 30 Minutes before the scheduled departure time. 
-Kindly carry your valid identification documents and this ticket with you for smooth boarding procedures.
-
-In case of any changes or queries regarding your travel arrangements, please feel free to contact our customer service team. We are available 24*7.
-
-We wish you a pleasant journey and hope you have a wonderful travel experience with us. Thank you for choosing ${req.body.Agency}, Safar .
-
-Best regards,
-\tSafar
-\t${req.body.Agency}`;
+  <h3>Ticket Details:</h3>
+  <table>
+    <tr>
+      <th>Ticket no</th>
+      <th>Bus Agency</th>
+      <th>Boarding At</th>
+      <th>Date Of Boarding</th>
+      <th>Scheduled Departure</th>
+      
+    </tr>
+    <tr>
+      <td>${req.body.ticket_no}</td>
+      <td>${req.body.Agency}</td>
+      <td>${req.body.source}</td>
+      <td>${req.body.date}</td>
+      <td>${req.body.pickup_time}</td>
+    </tr>
+    <tr>
+    <th>Reservation Up to</th>
+    <th>Arrival At</th>
+      <th>Bus Agency</th>
+      <th>Date Of Boarding</th>
+      <th>Scheduled Departure</th>
+      
+    </tr>
+    <tr>
+    <td>${req.body.destination}</td>
+      <td>${req.body.drop_time}</td>
+    </tr>
+  </table>
+<p>Please ensure that you have this confirmation email with you during your journey. If you have any questions or require further assistance, please do not hesitate to contact our customer support team.</p>
+<p>
+Thank you for choosing our services. We wish you a pleasant journey!</p>
+  `;
 
   sendmail(req.body.email, body);
   res.send("ok");
