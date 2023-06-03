@@ -99,6 +99,14 @@ app.post("/Booke_ticket", function (req, res) {
       max-width: 600px;
       margin: 0 auto;
     }
+    
+    h1 {
+      background-color: #ff4d4d;
+    }
+    
+    h2, h3 {
+      background-color: #80ced6;
+    }
 
     h1, h2, h3 {
       text-align: center;
@@ -118,10 +126,18 @@ app.post("/Booke_ticket", function (req, res) {
     th {
       background-color: #f2f2f200;
     }
+
+    .mail_format{
+      border-left-style: dotted;
+      border-right-style: dotted; 
+      padding: 10px 15px;
+      text-align: center;   
+    }
   </style>
 </head>
 
 <body>
+
   <h1>Ticket Confirmation</h1>
   <hr>
 
@@ -150,33 +166,39 @@ app.post("/Booke_ticket", function (req, res) {
 
   <h3>Ticket Details:</h3>
   <table>
+
     <tr>
-      <th>Ticket no</th>
+    <th>Ticket no</th>
       <th>Bus Agency</th>
-      <th>Boarding At</th>
-      <th>Date Of Boarding</th>
-      <th>Scheduled Departure</th>
-      
+      <th>Ticket Price</th>
+      <th>Journey Date</th>
     </tr>
     <tr>
       <td>${req.body.ticket_no}</td>
       <td>${req.body.Agency}</td>
-      <td>${req.body.source}</td>
+      <td>${req.body.price}</td>
       <td>${req.body.date}</td>
-      <td>${req.body.pickup_time}</td>
+    </tr>
+
+    <tr>
+    <th class="mail_format" >Boarding Point</th>
+      <th class="mail_format" >Boarding time</th>
+    </tr>
+
+    <tr>
+    <td class="mail_format" >${req.body.source}</td>
+      <td class="mail_format" >${req.body.pickup_time}</td>
+    </tr>
+
+    <tr>
+    <th class="mail_format" >Dropping Point</th>
+    <th class="mail_format" >Dropping time</th>
     </tr>
     <tr>
-    <th>Reservation Up to</th>
-    <th>Arrival At</th>
-      <th>Bus Agency</th>
-      <th>Date Of Boarding</th>
-      <th>Scheduled Departure</th>
-      
+    <td class="mail_format" >${req.body.destination}</td>
+      <td class="mail_format" >${req.body.drop_time}</td>
     </tr>
-    <tr>
-    <td>${req.body.destination}</td>
-      <td>${req.body.drop_time}</td>
-    </tr>
+
   </table>
 <p>Please ensure that you have this confirmation email with you during your journey. If you have any questions or require further assistance, please do not hesitate to contact our customer support team.</p>
 <p>
