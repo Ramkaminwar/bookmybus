@@ -195,18 +195,8 @@ app.post("/Booke_ticket", function (req, res) {
     <th class="mail_format" >Dropping time</th>
     </tr>
     <tr>
-<<<<<<< HEAD
-    <th>Reservation Up to</th>
-    <th>Arrival At</th>
-      
-    </tr>
-    <tr>
-    <td>${req.body.destination}</td>
-      <td>${req.body.drop_time}</td>
-=======
     <td class="mail_format" >${req.body.destination}</td>
       <td class="mail_format" >${req.body.drop_time}</td>
->>>>>>> c35b9fb12865db08a336f2132d5669c559211d40
     </tr>
 
   </table>
