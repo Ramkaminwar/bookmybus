@@ -98,6 +98,7 @@ app.post("/Booke_ticket", function (req, res) {
       font-family: Arial, sans-serif;
       max-width: 600px;
       margin: 0 auto;
+      position: relative;
     }
     
     h1 {
@@ -133,12 +134,44 @@ app.post("/Booke_ticket", function (req, res) {
       padding: 10px 15px;
       text-align: center;   
     }
+
+
+.left {
+  position: absolute;
+  top: 20px;
+  left: 55px;
+  display: inline-block;
+  text-align: center;
+  Filter: invert(0);
+}
+
+.left img {
+  width: 120px;
+}
+
+.left div {
+  text-align: center;
+}
+
+.logos{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  opacity: 10;
+  z-index: -1;
+}
+
   </style>
 </head>
 
 <body>
 
   <h1>Ticket Confirmation</h1>
+  <div class="logos">
+  <img src="https://github.com/Ramkaminwar/bookmybus/blob/c35b9fb12865db08a336f2132d5669c559211d40/logo.png?raw=true" alt="logo">
+</div>
   <hr>
 
   <h2>Dear ${req.body.user_name},</h2>
