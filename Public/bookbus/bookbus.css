@@ -49,6 +49,7 @@ header::before {
     height: 100%;
     z-index: -1;
     opacity: 0.4;
+
 }
 
 .left {
@@ -221,6 +222,7 @@ header::before {
   font-size: 18px;
   padding: 7px;
   font-family: 'Rajdhani', sans-serif;
+
 }
 
 
