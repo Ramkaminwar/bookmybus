@@ -58,8 +58,6 @@
         }
         
         .mail_format {
-            border-left-style: dotted;
-            border-right-style: dotted;
             padding: 10px 15px;
             text-align: center;
             margin-left: 10px;
@@ -93,13 +91,49 @@
         }
         
         .cont {
-            position: relative;
-            text-align: center;
+            display: block;
         }
         
-        .cont2 {
-            background: url(https://ci5.googleusercontent.com/proxy/Tm4sVZVNuen6TCKmHClrMTNz9dB-QszAQyiliMxF-bg8ik_mtH0ohSmjgwXs1QMbx3HQoX6vyCkJ9WEQ_uXcp1qzyUxSw5es1VyLseOqI9bgi_L-rd9c=s0-d-e1-ft#https://raw.githubusercontent.com/Ramkaminwar/bookmybus/main/tkt.png);
-            background: no;
+        .img {
+            display: flex;
+            align-items: center;
+            background: linear-gradient(to right, #f83d72, #fb6668)
+        }
+        
+        .outline {
+            width: 100%;
+            height: 250px;
+            margin: 20px;
+            border: 4px solid;
+        }
+        
+        .circle {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: white;
+            z-index: 1;
+        }
+        
+        .one {
+            top: 8%;
+        }
+        
+        .two {
+            top: 32%;
+        }
+        
+        .three {
+            top: 56%;
+        }
+        
+        .leftcircle {
+            left: -4%;
+        }
+        
+        .rightcircle {
+            right: -4%;
         }
     </style>
 </head>
@@ -135,6 +169,16 @@
 
     <h3>Ticket Details:</h3>
     <div class="cont">
+        <div class="img">
+
+            <div class="outline"></div>
+            <div class="circle one leftcircle"></div>
+            <div class="circle two leftcircle"></div>
+            <div class="circle three leftcircle"></div>
+            <div class="circle one rightcircle"></div>
+            <div class="circle two rightcircle"></div>
+            <div class="circle three rightcircle"></div>
+        </div>
         <table class="cont2">
 
             <tr>
@@ -174,3 +218,6 @@
     <p>Please ensure that you have this confirmation email with you during your journey. If you have any questions or require further assistance, please do not hesitate to contact our customer support team.</p>
     <p>
         Thank you for choosing our services. We wish you a pleasant journey!</p>
+</body>
+
+</html>
