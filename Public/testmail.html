@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Confirmation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .mail_bg {
+            width: 1000px;
+            height: 400px;
+        }
+        
+        .cont2 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        h1 {
+            background-color: #ff4d4d;
+        }
+        
+        h2,
+        h3 {
+            background-color: #80ced6;
+        }
+        
+        h1,
+        h2,
+        h3 {
+            text-align: center;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        th,
+        td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: #f2f2f200;
+        }
+        
+        .mail_format {
+            border-left-style: dotted;
+            border-right-style: dotted;
+            padding: 10px 15px;
+            text-align: center;
+            margin-left: 10px;
+        }
+        
+        .left {
+            position: absolute;
+            top: 20px;
+            left: 55px;
+            display: inline-block;
+            text-align: center;
+            Filter: invert(0);
+        }
+        
+        .left img {
+            width: 120px;
+        }
+        
+        .left div {
+            text-align: center;
+        }
+        
+        .logos {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            opacity: 10;
+            z-index: -1;
+        }
+        
+        .cont {
+            position: relative;
+            text-align: center;
+        }
+        
+        .cont2 {
+            background: url(https://ci5.googleusercontent.com/proxy/Tm4sVZVNuen6TCKmHClrMTNz9dB-QszAQyiliMxF-bg8ik_mtH0ohSmjgwXs1QMbx3HQoX6vyCkJ9WEQ_uXcp1qzyUxSw5es1VyLseOqI9bgi_L-rd9c=s0-d-e1-ft#https://raw.githubusercontent.com/Ramkaminwar/bookmybus/main/tkt.png);
+            background: no;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <h1 class="con">Ticket Confirmation</h1>
+    <hr>
+
+    <h2 class="con">Dear ${req.body.user_name},</h2>
+
+    <p class="con">Dear ${req.body.user_name}, Thank you for choosing ${req.body.Agency} for your bus travel. We are delighted to provide you with the details of your upcoming trip.
+    </p>
+
+
+    <h3>Passenger Details:</h3>
+    <table>
+        <tr>
+            <th>Name:</th>
+            <td>${req.body.user_name}</td>
+        </tr>
+        <tr>
+            <th>Email:</th>
+            <td>${req.body.email}</td>
+        </tr>
+        <tr>
+            <th>Contact Number:</th>
+            <td>${req.body.phone_no}</td>
+        </tr>
+    </table>
+
+    <h3>Ticket Details:</h3>
+    <div class="cont">
+        <table class="cont2">
+
+            <tr>
+                <th>Ticket no</th>
+                <th>Bus Agency</th>
+                <th>Ticket Price</th>
+                <th>Journey Date</th>
+            </tr>
+            <tr>
+                <td>${req.body.ticket_no}</td>
+                <td>${req.body.Agency}</td>
+                <td>${req.body.price}</td>
+                <td>${req.body.date}</td>
+            </tr>
+
+            <tr>
+                <th class="mail_format">Boarding Point</th>
+                <th class="mail_format">Boarding time</th>
+            </tr>
+
+            <tr>
+                <td class="mail_format">${req.body.source}</td>
+                <td class="mail_format">${req.body.pickup_time}</td>
+            </tr>
+
+            <tr>
+                <th class="mail_format">Dropping Point</th>
+                <th class="mail_format">Dropping time</th>
+            </tr>
+            <tr>
+                <td class="mail_format">${req.body.destination}</td>
+                <td class="mail_format">${req.body.drop_time}</td>
+            </tr>
+    </div>
+
+    </table>
+    <p>Please ensure that you have this confirmation email with you during your journey. If you have any questions or require further assistance, please do not hesitate to contact our customer support team.</p>
+    <p>
+        Thank you for choosing our services. We wish you a pleasant journey!</p>
