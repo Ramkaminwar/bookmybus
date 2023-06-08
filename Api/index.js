@@ -69,22 +69,22 @@ app.post("/savedata", function (req, res) {
 app.post("/Booke_ticket", function (req, res) {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "POST");
-  const data = new transaction_db({
-    user_name: req.body.user_name,
-    phone_no: req.body.phone_no,
-    email: req.body.email,
-    ticket_no: req.body.ticket_no,
-    source: req.body.source,
-    destination: req.body.destination,
-    date: req.body.date,
-    Agency: req.body.Agency,
-    pickup_time: req.body.pickup_time,
-    drop_time: req.body.drop_time,
-    price: req.body.price,
-  });
-  data.save();
+  try {
+    const data = new transaction_db({
+      user_name: req.body.user_name,
+      phone_no: req.body.phone_no,
+      email: req.body.email,
+      ticket_no: req.body.ticket_no,
+      source: req.body.source,
+      destination: req.body.destination,
+      date: req.body.date,
+      Agency: req.body.Agency,
+      pickup_time: req.body.pickup_time,
+      drop_time: req.body.drop_time,
+      price: req.body.price,
+    });
 
-  const body = `
+    const body = `
   <!DOCTYPE html>
 <html lang="en">
 
@@ -169,9 +169,6 @@ app.post("/Booke_ticket", function (req, res) {
 <body>
 
   <h1>Ticket Confirmation</h1>
-  <div class="logos">
-  <img src="https://github.com/Ramkaminwar/bookmybus/blob/c35b9fb12865db08a336f2132d5669c559211d40/logo.png?raw=true" alt="logo">
-</div>
   <hr>
 
   <h2>Dear ${req.body.user_name},</h2>
@@ -238,12 +235,54 @@ app.post("/Booke_ticket", function (req, res) {
 Thank you for choosing our services. We wish you a pleasant journey!</p>
   `;
 
-  sendmail(req.body.email, body);
-  res.send("ok");
+    data.save();
+
+    sendmail(req.body.email, body);
+    res.send("ok");
+  } catch (error) {
+    console.log("hello");
+    res.send("notok", 500);
+  }
+});
+
+app.post("/Cancel_Ticket", async function (req, res) {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "POST");
+  console.log(req.body);
+  let ticket = await transaction_db.findOne({
+    ticket_no: req.body.ticket_no,
+    user_name: req.body.user_name,
+    phone_no: req.body.phone_no,
+    email: req.body.email,
+  });
+
+  if (!ticket) {
+    res.status(400).send("Wrong details");
+  } else if (ticket.user_name === req.body.user_name) {
+    console.log(ticket);
+    res.send("You have Successfully Submited");
+
+    const body = `Ticket is cancelled`
+    sendmail(req.body.email, body);
+
+  } else {
+    res.send("You are not authorized to cancel this ticket");
+  }
+  await transaction_db.deleteOne({
+    ticket_no: req.body.ticket_no,
+    user_name: req.body.user_name,
+    phone_no: req.body.phone_no,
+    email: req.body.email,
+  });
+
+
+
+  
+
 });
 
 app.post("*", function (req, res) {
-  res.send("You have posted a wrong Request", 404);
+  res.status(404).send("You have posted a wrong Request");
 });
 
 app.listen(80, () => {

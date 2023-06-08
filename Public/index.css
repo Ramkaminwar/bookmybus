@@ -1,205 +1,10 @@
-/* body {
-    margin: 0;
-    padding: 0;
-    background-color: black;
-    color: white;
-    font-family: 'Rajdhani', sans-serif;
-}
-
-header::before {
-    background-image: url('/Pictures/bg.jpg');
-    background-repeat: no-repeat;
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    opacity: 0.4;
-}
-
-.left {
-    position: absolute;
-    top: 20px;
-    left: 55px;
-    display: inline-block;
-    text-align: center;
-}
-
-.left img {
-    width: 150px;
-}
-
-.left div {
-    text-align: center;
-}
-
-.mid {
-    display: block;
-    width: 33%;
-    margin: 20px auto;
-    font-size: 30px;
-}
-
-.navbar {
-    display: inline-block;
-}
-
-.navbar li {
-    display: inline-block;
-}
-
-.navbar li a {
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-    padding: 15px 20px;
-    transition: all 0.5s ease-in-out;
-}
-
-.navbar li a:hover,
-.navbar li a.active {
-    color: #7887b1;
-    text-decoration: none;
-}
-
-.right {
-    position: absolute;
-    top: 50px;
-    right: 55px;
-    display: inline-block;
-}
-
-.btn {
-    background-color: black;
-    color: white;
-    margin: 0px 20px;
-    padding: 10px 10px;
-    border: 1px solid gray;
-    border-radius: 15px;
-    font-size: 15px;
-    cursor: pointer;
-    font-family: 'Rajdhani', sans-serif;
-    text-decoration: none;
-    transition: all 0.5s ease-in-out;
-}
-
-.btn:hover {
-    background-color: #7887b1;
-    border: 1px solid black;
-}
-
-        .booking-form {
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            margin-top: 80px;
-            padding: 5px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
-        }
-        
-        .booking-form h1 {
-            color: white;
-            margin-bottom: -50px;
-            font-size: 60px;
-        }
-        
-        .booking-form form {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 80%;
-            height: 150px;
-            border: 1px solid gray; 
-            border-radius: 15px;
-            color: rgb(175, 13, 13);
-            background-color: #29292d75;
-        }
-
-        .booking-form form label,
-        input {
-            margin: 15px;
-            font-size: 15px;
-            font-weight: bold;
-            text-align: center;
-            color: rgb(0, 0, 0);
-        }
-
-.booking-form form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-    height: 110px;
-    border: 1px solid gray;
-    border-radius: 15px;
-    color: rgb(175, 13, 13);
-    background-color: #51505875;
-}
-
-        #date{
-            width: 100%;
-        }
-
-        #search{
-            width: 500px;
-        }
-
-section {
-    height: 444px;
-    margin: 3px 230px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-h1 {
-    font-size: 3rem;
-}
-
-p {
-    text-align: center;
-}
-
-footer {
-    color: white;
-    padding: 20px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    height: 100px;
-    margin-top: 210px;
-}
-
-footer a {
-    color: white;
-    text-decoration: underline;
-    cursor: pointer;
-    transition: all 0.5s ease-in-out;
-}
-
-footer a:hover {
-    color: #7887b1;
-    cursor: pointer;
-} */
-
 body {
     margin: 0;
-    
     padding: 0;
     background-color: rgb(255, 255, 255);
     color: rgb(255, 255, 255);
     font-family: 'Rajdhani', sans-serif;
-    /* background: linear-gradient(180deg, rgb(185, 243, 252) 11.2%, rgb(125, 89, 252) 91.1%); */
-    /* background: linear-gradient(0deg, rgb(120 135 177) 11.2%, rgb(125, 89, 252) 91.1%); */
     border-color: transparent transparent rgb(125, 89, 252);
-    /* background-color: #b8c1d7; */
     /* background: radial-gradient(circle at -8.9% 51.2%, rgb(255, 124, 0) 0%, rgb(255, 124, 0) 15.9%, rgb(255, 163, 77) 15.9%, rgb(255, 163, 77) 24.4%, rgb(19, 30, 37) 24.5%, rgb(19, 30, 37) 66%); */
 }
 
@@ -240,7 +45,6 @@ header::before {
 .mid {
     display: block;
     width: 43%;
-    /* width: 58%; */
     margin: 20px auto;
     font-size: 30px;
 }
@@ -253,7 +57,6 @@ header::before {
     animation-name: bus1;
     animation-duration: 8s;
     animation-iteration-count: infinite;
-    /* animation-iteration-count: 1; */
 }
 
 @keyframes bus1 {
@@ -275,7 +78,6 @@ header::before {
     animation-name: bus1;
     animation-duration: 8s;
     animation-iteration-count: infinite;
-    /* animation-iteration-count: 1; */
     animation-direction: reverse;
     z-index: -1;
 }
@@ -341,7 +143,6 @@ header::before {
 
 .booking-form {
     background: linear-gradient(180deg, rgb(185, 243, 252) 11.2%, rgb(125, 89, 252) 91.1%);
-    /* background-image: linear-gradient( rgb(185, 243, 252) 11.2% , rgb(125, 89, 252)85.1% , rgb(255, 255, 255)); */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -498,7 +299,6 @@ footer a:hover {
 }
 
 .pic {
-    padding: -41px;
     margin: 210px;
     margin-top: 10px;
     padding-left: 272px;
@@ -507,18 +307,14 @@ footer a:hover {
     font-size: 20px;
     font-weight: bolder;
     height: inherit;
+    margin-bottom: 60px;
 }
 
 .features {
     padding-right: 100px;
 }
 
-
-/* ======================================================  */
-
-
-/* Body & Image List Styles
--------------------------------------------------------------- */
+/* Body & Image List Styles */
 
 .img-list {
     list-style: none;
@@ -542,8 +338,7 @@ footer a:hover {
 }
 
 
-/* Image Placeholder Styles
-    -------------------------------------------------------------- */
+/* Image Placeholder Styles */
 
 .img-placeholder:before,
 .img-placeholder:after {
@@ -561,8 +356,7 @@ footer a:hover {
 }
 
 
-/* The hover effect
-    -------------------------------------------------------------- */
+/* The hover effect */
 
 .img-list li:before {
     transition: all .5s ease;

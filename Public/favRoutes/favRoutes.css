@@ -41,7 +41,6 @@ body {
 }
 
 header::before {
-    /* background-image: url('/Pictures/bg.jpg'); */
     background-repeat: no-repeat;
     content: "";
     position: absolute;

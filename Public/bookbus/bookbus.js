@@ -84,11 +84,16 @@ function myFunction() {
       redirect: "follow",
     };
     fetch("httP://localhost/Booke_ticket", requestOptions)
-      .then((response) => response.text())
+      .then((response) => response)
       .then((result) => {
-        alert(
-          `\nCongratulations!!\nYour ${finaldata[a].source} to ${finaldata[a].destination} Ticket of price ${finaldata[a].price} is Booked`
-        );
+        console.log(result.status);
+        if (result.status !== 500) {
+          alert(
+            `\nCongratulations!!\nYour ${finaldata[a].source} to ${finaldata[a].destination} Ticket of price ${finaldata[a].price} is Booked`
+          );
+        } else {
+          alert("Server Error Ocurred");
+        }
         console.log(result);
       })
       .catch((error) => alert("Error Ocurred"));
