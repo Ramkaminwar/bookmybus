@@ -7,9 +7,6 @@
     font-size: large;
 }
 
-
-
-
 body {
 	background: #f6f5f7;
 	display: flex;
@@ -168,9 +165,6 @@ input {
 	background: #FF416C;
 	background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
 	background: linear-gradient(to right, #FF4B2B, #FF416C);
-	/* background: #aa41ff;
-	background: -webkit-linear-gradient(to right, #bc2bff, #e641ff);
-	background: linear-gradient(to right, #bc2bff, #e641ff); */
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;
@@ -259,12 +253,8 @@ footer a {
     text-decoration: none;
 }
 
-
-/*  */
-
 .mid {
     display: block;
-    /* width: 43%; */
     margin: 20px auto;
     font-size: 30px;
     margin-bottom: 150px;
@@ -291,4 +281,3 @@ footer a {
     color: #7887b1;
     text-decoration: none;
 }
-
