@@ -125,9 +125,6 @@ header::before {
     border: 1px solid black;
 }
 
-/*  */
-
-
 #box1{
   width: 260px;
 }
@@ -179,11 +176,6 @@ header::before {
   transition: all 0.5s ease-in;
   transition-timing-function: linear;
 }
-
-/* #details:hover{
-  width: 75%;
-  
-} */
 
 .bookbtn{
   background-color: black;
