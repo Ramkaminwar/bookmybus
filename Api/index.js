@@ -53,6 +53,15 @@ app.get("/Search-Ticket", async function (req, res) {
   res.json(query);
 });
 
+app.get("/get_Ticket", async function (req, res) {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "POST");
+
+  const data = await transaction_db.find();
+  console.log(data);
+  res.json(data);
+});
+
 app.post("/savedata", function (req, res) {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "POST");

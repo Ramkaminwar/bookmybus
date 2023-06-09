@@ -88,8 +88,8 @@ function myFunction() {
     urlencoded.append("user_name", document.querySelector("#user_name").value);
     urlencoded.append("phone_no", document.querySelector("#phone_no").value);
     urlencoded.append("email", document.querySelector("#email").value);
-    urlencoded.append("source", source);
-    urlencoded.append("destination", desti);
+    urlencoded.append("source", finaldata[a].source);
+    urlencoded.append("destination", finaldata[a].destination);
     urlencoded.append("date", document.querySelector("#query").value);
     urlencoded.append("Agency", finaldata[a].Agency);
     urlencoded.append("ticket_no", random());
