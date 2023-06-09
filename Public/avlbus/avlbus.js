@@ -59,7 +59,7 @@ function myFunction(a) {
         alert(
           `\nCongratulations!!\nYour ${finaldata[a].source} to ${finaldata[a].destination} Ticket of price ${finaldata[a].price} is Booked`
         );
-        console.log(result);
+        window.location.replace("/");
       })
       .catch((error) => alert("Error Ocurred"));
   }

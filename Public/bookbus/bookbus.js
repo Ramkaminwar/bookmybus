@@ -46,7 +46,6 @@ const random = () => {
   let x = Math.floor(Math.random() * 100000 + 1);
   return x;
 };
-
 const displayModal = (b) => {
   a = b;
   modal.classList.add("active");
@@ -91,6 +90,7 @@ function myFunction() {
           alert(
             `\nCongratulations!!\nYour ${finaldata[a].source} to ${finaldata[a].destination} Ticket of price ${finaldata[a].price} is Booked`
           );
+          window.location.replace("/");
         } else {
           alert("Server Error Ocurred");
         }

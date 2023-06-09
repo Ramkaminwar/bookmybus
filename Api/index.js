@@ -287,9 +287,8 @@ app.post("/Cancel_Ticket", async function (req, res) {
     console.log(ticket);
     res.send("You have Successfully Submited");
 
-    const body = `Ticket is cancelled`
+    const body = `Ticket is cancelled`;
     sendmail(req.body.email, body);
-
   } else {
     res.send("You are not authorized to cancel this ticket");
   }
@@ -299,11 +298,6 @@ app.post("/Cancel_Ticket", async function (req, res) {
     phone_no: req.body.phone_no,
     email: req.body.email,
   });
-
-
-
-  
-
 });
 
 app.post("*", function (req, res) {

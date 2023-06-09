@@ -42,58 +42,50 @@
         </div>
 
     </header>
-    <div class="heading">
-        <h1 id="heading">Special Routes</h1>
-        <div id="details" class="mainbox">
-            <div id="box1" class="cbox">Agency Name: <p> Sharma Travels   </p> </div>
-            <div id="box2" class="cbox">Source:<p>  Mumbai</p>  </div>
-            <div id="box3" class="cbox">Destination:<p> Pune</p>  </div>
-            <div id="box4" class="cbox">Pick-up Time: <p>   10:00 AM</p> </div>
-            <div id="box5" class="cbox">Drop Time:<p>   01:00 PM</p>  </div>
-            <div id="box6" class="cbox">Price: <p>  400</p> </div>
-            <div class="bookbtn" >Book Now</div>
+    <div id="buses">
+
+
+        <div class="heading">
+            <h1 id="heading">Special Routes</h1>
         </div>
+        <div class="modal__overlay"></div>
+        <div class="modal">
+            <div id="modal__close-btn" class="modal__close-btn">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <div class="modal__left">
+                <p class="sale">Special<span>Sale</span></p>
+                <div class="modal__discount">
+                    <p>Save up to<span>15%</span></p>
+                </div>
+            </div>
+            <div class="modal__right">
+                <p class="modal__text">
+                    <h1>Enter Your Details</h1>
 
-    </div>
+                    <p id="ticket_no" type="tel" name=""></p>
+                    <div class="form">
+                        <input id="user_name" type="text" name="" placeholder="Enter your Name">
+                    </div>
 
-    <div class="heading">
-        <div id="details" class="mainbox">
-            <div id="box1" class="cbox">Agency Name: <p> Sharma Travels   </p> </div>
-            <div id="box2" class="cbox">Source:<p>  Pune</p>  </div>
-            <div id="box3" class="cbox">Destination:<p> Mumbai</p>  </div>
-            <div id="box4" class="cbox">Pick-up Time: <p>  08:00 PM</p> </div>
-            <div id="box5" class="cbox">Drop Time:<p> 11:00 PM</p>  </div>
-            <div id="box6" class="cbox">Price: <p>  500</p> </div>
-            <div class="bookbtn" >Book Now</div>
+                    <div class="form">
+                        <input id="email" type="email" name="" placeholder="Enter your Email ID">
+                    </div>
+
+                    <div class="form">
+                        <input id="phone_no" type="tel" name="" placeholder="Enter your Phone Number">
+                    </div>
+
+                    <div class="form">
+                        <input id="query" type="date" name="">
+                    </div>
+                </p>
+
+
+                <p class="modal__info">To book Bus Click below button</p>
+                <a onclick="myFunction()" class="bookbtn1">Book Ticket</a>
+            </div>
         </div>
-
-    </div>
-
-    <div class="heading">
-        <div id="details" class="mainbox">
-            <div id="box1" class="cbox">Agency Name: <p> Royal Travles  </p> </div>
-            <div id="box2" class="cbox">Source:<p>  Nanded </p>  </div>
-            <div id="box3" class="cbox">Destination:<p> Pune</p>  </div>
-            <div id="box4" class="cbox">Pick-up Time: <p>   10:00 PM</p> </div>
-            <div id="box5" class="cbox">Drop Time:<p>   08:00 AM</p>  </div>
-            <div id="box6" class="cbox">Price: <p>  1200 </p> </div>
-            <div class="bookbtn" >Book Now</div>
-        </div>
-
-    </div>
-
-    <div class="heading">
-        <div id="details" class="mainbox">
-            <div id="box1" class="cbox">Agency Name: <p> Prasanna Purple Grand </p> </div>
-            <div id="box2" class="cbox">Source:<p>  Pune </p>  </div>
-            <div id="box3" class="cbox">Destination:<p> Nanded </p>  </div>
-            <div id="box4" class="cbox">Pick-up Time: <p>   09:00 PM</p> </div>
-            <div id="box5" class="cbox">Drop Time:<p> 10:00 AM  </p>  </div>
-            <div id="box6" class="cbox">Price: <p>  1500 </p> </div>
-            <div class="bookbtn" >Book Now</div>
-        </div>
-
-    </div>
 </body>
 
 <script src="/favRoutes/favRoutes.js"></script>
